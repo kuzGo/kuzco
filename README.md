@@ -189,6 +189,7 @@ In order to successfully  run the app on Heroku,there are a few applications and
 
 
 ### Photographers :
+(Maciej PanFazi)[https://www.pexels.com/video/watch-with-visible-parts-6867665/]
 
 
 
