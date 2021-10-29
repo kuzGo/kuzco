@@ -38,7 +38,7 @@
       <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="#">Kuzco</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span><i class="fas fa-ellipsis-h"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
@@ -67,9 +67,16 @@
         </div>
       </nav>
     </header>
-    <video class="home-video" loop autoplay muted>
-      <source src="{% static 'video/home-video.mp4' type='video/mp4' %}"></video>
-      <div class="vid-overlay"></div>
+    <div class="hero-wrapper">
+      <video class="home-video" loop autoplay muted>
+        <source src="{% static 'video/home-video.mp4' type='video/mp4' %}"></video>
+        <div class="vid-overlay"></div>
+        <div class="hero-text">
+          <h3> We believe always is the right time </h3>
+          <a href="#">Explore our Collection</a>
+        </div>
+        
+    </div>
     {% if messages %}
       <div class="messages-container"></div>
     {% endif %}
