@@ -10,5 +10,14 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="hero-wrapper">
+    <video class="home-video" loop autoplay muted>
+      <source src="{% static 'video/home-video.mp4' type='video/mp4' %}"></video>
+      <div class="vid-overlay"></div>
+      <div class="hero-text">
+        <h3> We believe it's always the right time </h3>
+        <a href="#">Explore our Collection</a>
+      </div>  
+  </div>
+  
 {% endblock %}
