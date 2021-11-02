@@ -189,7 +189,33 @@ In order to successfully  run the app on Heroku,there are a few applications and
 
 
 ### Photographers :
-(Maciej PanFazi)[https://www.pexels.com/video/watch-with-visible-parts-6867665/]
+
+* Pexels:
+
+ [Maciej PanFazi](https://www.pexels.com/video/watch-with-visible-parts-6867665/)
+
+ [Antony Trivet](https://www.pexels.com/photo/gold-watch-from-above-9981574/)
+
+ [Antony Trivet](https://www.pexels.com/photo/grand-carrera-brand-watch-with-strap-of-brown-crocodile-leather-9978676/)
+
+ [Antony Trivet](https://www.pexels.com/photo/gold-watch-on-black-material-9982007/)
+
+ [Antony Trivet](https://www.pexels.com/photo/gold-watch-on-black-material-9981575/)
+
+ [Antony Trivet](https://www.pexels.com/photo/cartier-brand-watch-for-women-9978775/)
+
+ [Antony Trivet](https://www.pexels.com/photo/watch-on-black-material-9981750/)
+
+ [Antony Trivet](https://www.pexels.com/photo/gold-watch-from-above-9981574/)
+
+ [Antony Trivet](https://www.pexels.com/photo/elegant-brown-watch-9980862/)
+
+ [Pixabay](https://www.pexels.com/photo/analogue-blur-chrome-classic-280250/)
+
+ [Pixabay](https://www.pexels.com/photo/luxury-clock-wrist-watch-gmt-master-47856/)
+ 
+ [Alex Carollo](https://www.pexels.com/photo/black-citizen-analog-watch-592815/)
+ 
 
 
 
