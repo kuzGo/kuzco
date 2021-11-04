@@ -1,0 +1,58 @@
+[
+    {
+      "model": "products.category",
+      "pk": 1,
+      "fields": {
+        "name": "chronograph",
+        "ui_name": "Chronograph"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 2,
+      "fields": {
+        "name": "sport_watches",
+        "ui_name": "Sport"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 3,
+      "fields": {
+        "name": "smartwatch",
+        "ui_name": "Smartwatch"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 8,
+      "fields": {
+        "name": "gift_card_twenty",
+        "ui_name": "€20"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 9,
+      "fields": {
+        "name": "gift_card_fifty",
+        "ui_name": "€50"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 10,
+      "fields": {
+        "name": "gift_card_hundred",
+        "ui_name": "€100"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 11,
+      "fields": {
+        "name": "on_sale",
+        "ui_name": "On Sale"
+      }
+    }
+  ]
