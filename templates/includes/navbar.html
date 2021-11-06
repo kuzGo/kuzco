@@ -1,51 +1,50 @@
 <div class="collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav w-auto mx-auto">
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-watches" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    All Watches    </a>
-                <div class="dropdown-menu border-0" aria-labelledby="all-watches" >
-                    <a href="" class="dropdown-item">By Price</a>
-                    <a href="" class="dropdown-item ">By Brand</a>
-                    <a href="" class="dropdown-item ">By Type</a>
-                    <a href="" class="dropdown-item">All Watches</a>
-                </div>
-            </li>
-    
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="for-him" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 For Him
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="for-him" >
-                    <a href="" class="dropdown-item">Chronograph</a>
-                    <a href="" class="dropdown-item">Sport</a>
-                    <a href="" class="dropdown-item">Smartwatch</a>
-                    <a href="" class="dropdown-item">All Watches</a>
-                </div>
-            </li>
-    
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="for-her" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    For Her
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="for-her"  >
-                    <a href="" class="dropdown-item">Chronograph</a>
-                    <a href="" class="dropdown-item">Sport</a>
-                    <a href="" class="dropdown-item">Smartwatch</a>
-                    <a href="" class="dropdown-item">All Watches</a>  
-                </div>
-            </li>
-    
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black" href="#" id="gift-cards" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Gift Cards & Deals
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="gift-cards">
-                    <a href="" class="dropdown-item">&#8364;20</a>
-                    <a href="" class="dropdown-item">&#8364;50</a>
-                    <a href="" class="dropdown-item">&#8364;100</a>
-                    <a href="" class="dropdown-item">On Sale</a>
-                    <a href="" class="dropdown-item">All Deals</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link mob-nav mr-5" href="#" id="all-watches" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Watches
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-watches">
+                <a href="" class="dropdown-item">By Price</a>
+                <a href="" class="dropdown-item ">By Brand</a>
+                <a href="" class="dropdown-item ">By Type</a>
+                <a href="{% url 'watches' %}" class="dropdown-item">All Watches</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="mob-nav font-weight-bold nav-link mr-5" href="#" id="for-him" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                For Him
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="for-him">
+                <a href="" class="dropdown-item">Chronograph</a>
+                <a href="" class="dropdown-item">Sport</a>
+                <a href="" class="dropdown-item">Smartwatch</a>
+                <a href="{% url 'watches' %}" class="dropdown-item">All Watches</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="mob-nav font-weight-bold nav-link  mr-5" href="#" id="for-her" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                For Her
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="for-her">
+                <a href="" class="dropdown-item">Chronograph</a>
+                <a href="" class="dropdown-item">Sport</a>
+                <a href="" class="dropdown-item">Smartwatch</a>
+                <a href="{% url 'watches' %}" class="dropdown-item">All Watches</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="mob-nav font-weight-bold nav-link" href="#" id="gift-cards" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gift Cards & Deals
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="gift-cards">
+                <a href="" class="dropdown-item">&#8364;20</a>
+                <a href="" class="dropdown-item">&#8364;50</a>
+                <a href="" class="dropdown-item">&#8364;100</a>
+                <a href="" class="dropdown-item">On Sale</a>
+                <a href="" class="dropdown-item">All Deals</a>
+
+            </div>
+        </li>
+    </ul>
+</div>

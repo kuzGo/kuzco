@@ -26,11 +26,11 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
                             {% if watch.image %}
-                            <a href="">
+                            <a href="{% url 'watch_detail' watch.id %}">
                                 <img class="card-img-top img-fluid" src="{{ watch.image.url }}" alt="{{ watch.name }}">
                             </a>
                             {% else %}
-                            <a href="">
+                            <a href="{% url 'watch_detail' watch.id %}">
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ watch.name }}">
                             </a>
                             {% endif %}
