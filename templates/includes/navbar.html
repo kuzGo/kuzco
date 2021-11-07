@@ -16,9 +16,9 @@
                 For Him
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="for-him">
-                <a href="" class="dropdown-item">Chronograph</a>
-                <a href="" class="dropdown-item">Sport</a>
-                <a href="" class="dropdown-item">Smartwatch</a>
+                <a href="{% url 'watches' %}?category=chronograph" class="dropdown-item">Chronograph</a>
+                <a href="{% url 'watches' %}?category=sport_watches" class="dropdown-item">Sport</a>
+                <a href="{% url 'watches' %}?category=smartwatch" class="dropdown-item">Smartwatch</a>
                 <a href="{% url 'watches' %}" class="dropdown-item">All Watches</a>
             </div>
         </li>
