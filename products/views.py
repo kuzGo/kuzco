@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Product
 
 # Create your views here.
@@ -7,9 +9,20 @@ from .models import Product
 def all_watches(request):
     """ Shows all watches , handles sorting and searching """
     watches = Product.objects.all()
+    query = None
 
+    if request.GET:
+        if 'query' in request.GET:
+            query = request.GET['query']
+            if not query:
+                messages.error(request, 'Please enter any search criteria.')
+                return redirect(reverse('watches'))
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
+            watches = watches.filter(queries)
     context = {
         'watches': watches,
+        'search_term': query,
     }
 
     return render(request, 'watches/watches.html', context)

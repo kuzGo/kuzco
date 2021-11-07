@@ -113,8 +113,17 @@ html {
     max-width: 100%;
     height: 29vh;
     width: 100%;
-    height: 40vw;
+    height: 38vw;
     object-fit: cover;
+}
+.img-detail:hover {
+    height: 39vw;
+    transition: ease-in-out 0.8s;
+
+}
+.img-fluid:hover{
+    height: 22vw;
+    transition: ease-in-out 0.8s;
 }
 .header-container {
     padding-top: 134px;
