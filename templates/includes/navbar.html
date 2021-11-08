@@ -5,9 +5,12 @@
                 All Watches
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-watches">
-                <a href="" class="dropdown-item">By Price</a>
+                <a href="{% url 'watches' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item ">By Brand</a>
-                <a href="" class="dropdown-item ">By Type</a>
+                <a href="{% url 'watches' %}?sort=sku&direction=asc" class="dropdown-item ">By SKU Number</a>
+                <a href="{% url 'watches' %}?sort=rating&direction=desc" class="dropdown-item ">Rating</a>
+                <a href="{% url 'watches' %}?sort=category&direction=asc" class="dropdown-item ">By Type</a>
+                <a href="{% url 'watches' %}?sort=image&direction=asc" class="dropdown-item ">With The Image</a>
                 <a href="{% url 'watches' %}" class="dropdown-item">All Watches</a>
             </div>
         </li>
@@ -27,9 +30,9 @@
                 For Her
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="for-her">
-                <a href="" class="dropdown-item">Chronograph</a>
-                <a href="" class="dropdown-item">Sport</a>
-                <a href="" class="dropdown-item">Smartwatch</a>
+                <a href="{% url 'watches' %}?category=chronograph_for_her" class="dropdown-item">Chronograph</a>
+                <a href="{% url 'watches' %}?category=sport_for_her" class="dropdown-item">Sport</a>
+                <a href="{% url 'watches' %}?category=smartwatch_for_her" class="dropdown-item">Smartwatch</a>
                 <a href="{% url 'watches' %}" class="dropdown-item">All Watches</a>
             </div>
         </li>
@@ -38,12 +41,10 @@
                 Gift Cards & Deals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gift-cards">
-                <a href="" class="dropdown-item">&#8364;20</a>
-                <a href="" class="dropdown-item">&#8364;50</a>
-                <a href="" class="dropdown-item">&#8364;100</a>
-                <a href="" class="dropdown-item">On Sale</a>
-                <a href="" class="dropdown-item">All Deals</a>
-
+                <a href="{% url 'watches' %}?category=gift_card_twenty" class="dropdown-item">&#8364;20</a>
+                <a href="{% url 'watches' %}?category=gift_card_fifty" class="dropdown-item">&#8364;50</a>
+                <a href="{% url 'watches' %}?category=gift_card_hundred" class="dropdown-item">&#8364;100</a>
+                <a href="{% url 'watches' %}?category=on_sale" class="dropdown-item">On Sale</a>
             </div>
         </li>
     </ul>
