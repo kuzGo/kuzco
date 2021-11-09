@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.core.paginator import Paginator
 from django.db.models.functions import Lower
 
 from .models import Product, Category
@@ -47,8 +48,14 @@ def all_watches(request):
             watches = watches.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
+    watches_paginator = Paginator(watches, 4)
+
+    page_num = request.GET.get('page')
+
+    page = watches_paginator.get_page(page_num)
     context = {
-        'watches': watches,
+        'page': page,
         'search_term': query,
         'categories': categories,
         'current_sorting': current_sorting,
