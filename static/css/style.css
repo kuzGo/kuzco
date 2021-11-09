@@ -47,7 +47,7 @@ html {
     left: 0;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 .vid-overlay {
@@ -107,14 +107,14 @@ html {
     height: 29vh;
     width: 100%;
     height: 20vw;
-    object-fit: cover;
+    object-fit: contain;
 }
 .img-detail{
     max-width: 100%;
     height: 29vh;
     width: 100%;
     height: 38vw;
-    object-fit: cover;
+    object-fit: contain;
 }
 .img-detail:hover {
     height: 39vw;

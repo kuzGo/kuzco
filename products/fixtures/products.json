@@ -1,100 +1,142 @@
 [
-    {
-      "model": "products.product",
-      "pk": 1,
-      "fields": {
-        "category": 1,
-        "name": "The Sea-Dweller",
-        "description": "The Sea-Dweller and Rolex Deepsea are ultra-resistant divers’ watches engineered by Rolex for deep-sea exploration. \r\nWaterproof to a depth of 4,000 feet (1,220 metres) for the Rolex Sea-Dweller, launched in 1967, and 12,800 feet (3,900 metres) for the Rolex Deepsea unveiled in 2008, they are the ultimate manifestation of Rolex’s leadership in divers’ watches and the result of decades of collaboration with diving professionals.",
-        "price": "1605.00",
-        "image": "rolex1_S1SjZbx.png",
-        "rating": "5.00",
-        "sku": "M223-02-001",
-        "gender": "Male"
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 2,
-      "fields": {
-        "category": 1,
-        "name": "Neutra Chronograph Black Leather Watch",
-        "description": "Case size: 44mm; Band size: 22mm; quartz movement with chronograph analog display and date window; hardened mineral crystal lens resists scratches; imported\r\nStainless steel case with black dial; genuine black leather band with buckle closure; interchangeable with all 22mm Fossil watch bands\r\nWater resistant to 50m (165ft): suitable for short periods of recreational swimming and showering, but not diving or snorkeling",
-        "price": "165.00",
-        "image": "fossil_1Wjfjy5.png",
-        "rating": "4.70",
-        "sku": "M223-02-002",
-        "gender": "Male"
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 3,
-      "fields": {
-        "category": 1,
-        "name": "Ronde Solo De Cartier",
-        "description": "Ronde Solo de Cartier watch, 29 mm, quartz movement. Steel case, beaded crown set with a synthetic cabochon-shaped spinel, silvered light opaline dial, blued-steel sword-shaped hands, sapphire crystal, black grained calfskin interchangeable strap, steel double adjustable folding buckle. Case thickness: 6.35 mm. Water-resistant to 3 bar (approx. 30 meters/100 feet).",
-        "price": "2280.00",
-        "image": "cartier_FS62iDX.png",
-        "rating": "4.90",
-        "sku": "M223-02-003",
-        "gender": "Female"
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 4,
-      "fields": {
-        "category": 1,
-        "name": "PARADIGM",
-        "description": "Make a statement with this bold Super Titanium™ CITIZEN Paradigm watch with dark blue dial. Features on this 3-hand model include luminous hour and minute hands and markers, along with a date indicator and sapphire crystal. Featuring our Eco-Drive technology – powered by light, any light. Never needs a battery. Caliber number E111.",
-        "price": "475.00",
-        "image": "citizen_cZmdG7Y.png",
-        "rating": "4.90",
-        "sku": "M223-02-004",
-        "gender": "Male"
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 5,
-      "fields": {
-        "category": 1,
-        "name": "Hublot Classic Fusion Titanium",
-        "description": "Hublot Classic Fusion Titanium King Gold Strap Watch. Where traditional watchmaking meets cutting edge design and innovation. Hublot are constantly pushing the boundaries to create exceptional timepieces. Featuring a 45mm polished and satin finished Titanium case with an 18k rose King Gold fixed bezel. Self-winding automatic HUB1112 movement. Sapphire crystal glass. Matt black dial with rose plated indexes. Black alligator leather and rubber strap with an 18k rose gold and stainless steel deployment buckle. Ref: 511.no.1181.lr",
-        "price": "9140.00",
-        "image": "hublot_79VUBtW.png",
-        "rating": "5.00",
-        "sku": "M223-02-005",
-        "gender": "Female"
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 6,
-      "fields": {
-        "category": 1,
-        "name": "Montblanc 1858",
-        "description": "The Montblanc 1858 product line is inspired by the legendary professional Minerva watches from the 1920s and 1930s which were conceived for military use and exploration. Reinterpreting these historical timepieces, the Montblanc 1858 product line expresses the spirit of mountain exploration, embodying the modern trend of returning to nature. The Montblanc 1858 Automatic Chronograph Limited Edition 1858 watch comes with a bi-directional steel bezel that has been enhanced with shiny black ceramic and the four engraved luminescent cardinal points. The 42 mm stainless steel case features both polished and satin finishes and has been engraved with the Mont Blanc mountain, a compass, and two crossed ice pick-axes, as a nod to the Spirit of Mountain Exploration. For legibility and design, the black dial contrasts with historical beige luminescent cathedral-shaped hands and beige luminescent Arabic numerals. The timepiece is completed with a black calf leather strap with beige stitching.",
-        "price": "4500.00",
-        "image": "montblanc_i4XRSmM.png",
-        "rating": "4.90",
-        "sku": "M223-02-006",
-        "gender": "Male"
-      }
-    },
-    {
-      "model": "products.product",
-      "pk": 7,
-      "fields": {
-        "category": 1,
-        "name": "MontBlanc Star 4810",
-        "description": "MontBlanc Star 4810 Model Ref: 102339 The MontBlanc Star 4810 Model Ref: 102339 is an 18k Rose Gold automatic leather strap watch. It has a 41.5mm 18k rose gold case, domed sapphire crystal glass, silver guilloche dial with rose gold roman numerals and hour markers, 18k rose gold non-screw down crown and is water resistant to 30 metres. It is powered by a MontBlanc calibre self-winding automatic movement with a power reserve of 42 hours.",
-        "price": "8950.00",
-        "image": "montblanc2_KenkUS0.png",
-        "rating": "4.80",
-        "sku": "M223-02-007",
-        "gender": "Male"
-      }
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "The Sea-Dweller",
+      "description": "The Sea-Dweller and Rolex Deepsea are ultra-resistant divers’ watches engineered by Rolex for deep-sea exploration. \r\nWaterproof to a depth of 4,000 feet (1,220 metres) for the Rolex Sea-Dweller, launched in 1967, and 12,800 feet (3,900 metres) for the Rolex Deepsea unveiled in 2008, they are the ultimate manifestation of Rolex’s leadership in divers’ watches and the result of decades of collaboration with diving professionals.",
+      "price": "1605.00",
+      "image": "rolex1_S1SjZbx.png",
+      "rating": "5.00",
+      "sku": "M223-02-001",
+      "gender": "Male"
     }
-  ]
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Neutra Chronograph Black Leather Watch",
+      "description": "Case size: 44mm; Band size: 22mm; quartz movement with chronograph analog display and date window; hardened mineral crystal lens resists scratches; imported\r\nStainless steel case with black dial; genuine black leather band with buckle closure; interchangeable with all 22mm Fossil watch bands\r\nWater resistant to 50m (165ft): suitable for short periods of recreational swimming and showering, but not diving or snorkeling",
+      "price": "165.00",
+      "image": "fossil_1Wjfjy5.png",
+      "rating": "4.70",
+      "sku": "M223-02-002",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 12,
+      "name": "Ronde Solo De Cartier",
+      "description": "Ronde Solo de Cartier watch, 29 mm, quartz movement. Steel case, beaded crown set with a synthetic cabochon-shaped spinel, silvered light opaline dial, blued-steel sword-shaped hands, sapphire crystal, black grained calfskin interchangeable strap, steel double adjustable folding buckle. Case thickness: 6.35 mm. Water-resistant to 3 bar (approx. 30 meters/100 feet).",
+      "price": "2280.00",
+      "image": "cartier_FS62iDX.png",
+      "rating": "4.90",
+      "sku": "M223-02-003",
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "PARADIGM",
+      "description": "Make a statement with this bold Super Titanium™ CITIZEN Paradigm watch with dark blue dial. Features on this 3-hand model include luminous hour and minute hands and markers, along with a date indicator and sapphire crystal. Featuring our Eco-Drive technology – powered by light, any light. Never needs a battery. Caliber number E111.",
+      "price": "475.00",
+      "image": "citizen_cZmdG7Y.png",
+      "rating": "4.90",
+      "sku": "M223-02-004",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 12,
+      "name": "Hublot Classic Fusion Titanium",
+      "description": "Hublot Classic Fusion Titanium King Gold Strap Watch. Where traditional watchmaking meets cutting edge design and innovation. Hublot are constantly pushing the boundaries to create exceptional timepieces. Featuring a 45mm polished and satin finished Titanium case with an 18k rose King Gold fixed bezel. Self-winding automatic HUB1112 movement. Sapphire crystal glass. Matt black dial with rose plated indexes. Black alligator leather and rubber strap with an 18k rose gold and stainless steel deployment buckle. Ref: 511.no.1181.lr",
+      "price": "9140.00",
+      "image": "hublot_79VUBtW.png",
+      "rating": "5.00",
+      "sku": "M223-02-005",
+      "gender": "Female"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "name": "Montblanc 1858",
+      "description": "The Montblanc 1858 product line is inspired by the legendary professional Minerva watches from the 1920s and 1930s which were conceived for military use and exploration. Reinterpreting these historical timepieces, the Montblanc 1858 product line expresses the spirit of mountain exploration, embodying the modern trend of returning to nature. The Montblanc 1858 Automatic Chronograph Limited Edition 1858 watch comes with a bi-directional steel bezel that has been enhanced with shiny black ceramic and the four engraved luminescent cardinal points. The 42 mm stainless steel case features both polished and satin finishes and has been engraved with the Mont Blanc mountain, a compass, and two crossed ice pick-axes, as a nod to the Spirit of Mountain Exploration. For legibility and design, the black dial contrasts with historical beige luminescent cathedral-shaped hands and beige luminescent Arabic numerals. The timepiece is completed with a black calf leather strap with beige stitching.",
+      "price": "4500.00",
+      "image": "montblanc_i4XRSmM.png",
+      "rating": "4.90",
+      "sku": "M223-02-006",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "name": "MontBlanc Star 4810",
+      "description": "MontBlanc Star 4810 Model Ref: 102339 The MontBlanc Star 4810 Model Ref: 102339 is an 18k Rose Gold automatic leather strap watch. It has a 41.5mm 18k rose gold case, domed sapphire crystal glass, silver guilloche dial with rose gold roman numerals and hour markers, 18k rose gold non-screw down crown and is water resistant to 30 metres. It is powered by a MontBlanc calibre self-winding automatic movement with a power reserve of 42 hours.",
+      "price": "8950.00",
+      "image": "montblanc2_KenkUS0.png",
+      "rating": "4.80",
+      "sku": "M223-02-007",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 8,
+      "name": "€ 20 Gift Voucher",
+      "description": "This gift certificate may be used for online purchases. It cannot be used in conjunction with other promotions and is non-transferable.",
+      "price": "20.00",
+      "image": "gift_card_20.jpg",
+      "rating": null,
+      "sku": "M223-02-006",
+      "gender": "Unisex"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 9,
+      "name": "€ 50 Gift Voucher",
+      "description": "This gift certificate may be used for online purchases. It cannot be used in conjunction with other promotions and is non-transferable.",
+      "price": "50.00",
+      "image": "gift_card_50.jpg",
+      "rating": null,
+      "sku": "M223-02-007",
+      "gender": "Unisex"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 10,
+      "name": "€100 Gift Voucher",
+      "description": "This gift certificate may be used for online purchases. It cannot be used in conjunction with other promotions and is non-transferable.",
+      "price": "100.00",
+      "image": "gift_card_100.jpg",
+      "rating": null,
+      "sku": "M223-02-008",
+      "gender": "Unisex"
+    }
+  }
+]

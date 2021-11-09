@@ -11,7 +11,7 @@ from .models import Product, Category
 
 def all_watches(request):
     """ Shows all watches , handles sorting and searching """
-    watches = Product.objects.all()
+    watches = Product.objects.all().order_by('id')
     query = None
     categories = None
     sort = None
