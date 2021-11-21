@@ -135,7 +135,10 @@ html {
 .logo-font {
     margin-top: 3rem;
 }
-
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 /* Smartphones portrait and landscape orientation  */
 @media only screen and (min-width: 320px) and (max-width: 823px) {
 
