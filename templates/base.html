@@ -95,12 +95,30 @@
                                         {% else %}
                                             &#8364;0.00
                                         {% endif %}
-                                    </p>
+                                    </p>                           
                                 </div>
                             </a>
+                           
                         </li>
                     </ul>
                 </div>
+                {% if messages %}
+                <div class="messages-container">
+                    {% for message in messages %}
+                      {% with message.level as level %}
+                        {% if level == 40 %}
+                             {% include 'includes/messages/error_message.html' %}
+                         {% elif level == 30 %}
+                             {% include 'includes/messages/warning_message.html' %}            
+                         {% elif level == 25 %}
+                            {% include 'includes/messages/success_message.html' %}
+                        {% else %}
+                            {% include 'includes/messages/info_message.html' %}
+                        {% endif %}
+                     {% endwith %}
+                    {% endfor %}
+                </div>
+            {% endif %}
             </div>
             <div class="row">
                 <nav class="navbar navbar-expand-lg w-100">
@@ -115,15 +133,17 @@
             </div>
         </header>
 
-        {% if messages %}
-            <div class="messages-container"></div>
-        {% endif %}
+       
 
         {% block page_header %}{% endblock %}
 
         {% block content %}{% endblock %}
 
-        {% block postload_js %}{% endblock %}
+        {% block postload_js %}
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
+        {% endblock %}
 
     </body>
 

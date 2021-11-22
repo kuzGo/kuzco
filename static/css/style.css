@@ -139,6 +139,30 @@ html {
 .remove-item {
     cursor: pointer;
 }
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999999;
+}
+.custom-toast {
+    overflow: visible;
+}
+.toast-capper {
+    height: 2px;
+}
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
 /* Smartphones portrait and landscape orientation  */
 @media only screen and (min-width: 320px) and (max-width: 823px) {
 
@@ -195,7 +219,7 @@ html {
     }
 }
 
-/* search bar test */
+/* search bar animation */
 button {
     background:transparent;
     border: none;
