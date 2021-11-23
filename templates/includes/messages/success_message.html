@@ -1,5 +1,4 @@
 <div role="alert" aria-live="assertive" aria-atomic="true" class="custom-toast toast" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header">
       <strong class="mr-auto">Success!</strong>
@@ -8,6 +7,13 @@
       </button>
     </div>
     <div class="toast-body">
-     {{ message }}
+      <div class="row">
+        <div class="col">
+        {{ message }}
+        <hr class="mt-1 mb-3">
+        </div>
+      </div>
+      {% if grand_total %}
+      {% endif grand_total %}
     </div>
   </div>
