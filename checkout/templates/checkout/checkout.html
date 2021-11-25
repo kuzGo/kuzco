@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_tools %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    {% endblock %}
+
+    {% block page_header %}
+        <div class="container header-contianer">
+            <div class="row">
+                <div class="col"></div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <h2 class="logo-font">
+                        Shopping Cart
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6 order-lg-last mb-5">
+                    <div class="row">
+                        <div class="col-7 offset-2">
+                            <p class="mb-1 mt-0 small text-muted">Item</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="mb1 mt-0 small-text-muted">Subtotal</p>
+                        </div>
+                    </div>
+                    {% for item in cart_contents %}
+                        <div class="row">
+                            <div class="col-2 mb-1">
+                                <a href="{% url 'watch_detail' item.item_id %}" alt="{{ watch.name }}" class="w-100">
+                                    {% if item.watch.image %}
+                                        <img src="{{ item.watch.image.url }}" alt="{{ item.watch.image.name }}" class="w-100">
+                                    {% else %}
+                                        <img class="card-img-top img-detail" src="{{ MEDIA_URL }}noimage.png" alt="{{ watch.name }}"></a>
+                                    {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <p class="my-0">
+                                <strong>{{ item.watch.name }}</strong>
+                            </p>
+                            <p class="my-0 small text-muted">Quantity:{{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="my-0 small text-muted">${{ item.watch.price | calc_subtotal:item.quantity }}</p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+                <div class="row text-right">
+                    <div class="col-7 offset-2">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Grand Total:</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="my-0">&#8364;{{ total | floatformat:2 }}</p>
+                        <p class="my-0">&#8364;{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0">&#8364;{{ grand_total | floatformat:2 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Please fill out your details below.</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small ">Your Details:
+                        </legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small ">Delivery Details:</legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        <div class="form-check form-check-inline float-right mr-0">
+                            {% if user.is_authenticated %}
+                                <label for="" class="form-check-label" for="id-save-info">
+                                    Use for the shipto same as billto address</label>
+                                <input type="checkbox" class="form-check-input ml-2 mr-0" id="id-save-info" name="save-info" checked>
+                                {% else %}
+                                    <label for="id-save-info" class="form-check-label">
+                                        <a href="{% url 'account_signup' %}" class="text-info">Create an account</a>
+                                        <a href="{% url 'account_login' %}" class="text-info">login</a>
+                                    {% endif %}
+                                </div>
+                            </fieldset>
+                            <fieldset class="px-3">
+                                <legend class="fieldset-label small ">Payment</legend>
+                                <!-- A Stripe card element will go here -->
+                                <div class="mb-3" id="card-element"></div>
+                                <!-- Used to display form errors -->
+                                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                                <!-- Pass the client secret to the view so we can get payment intent id -->
+                                <input type="hidden" value="" name="client_secret"></fieldset>
+                                <div class="submit-button text-right mt-5 mb-2">
+                                    <a href="" class="btn btn-outline-black rounded-0">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="font-weight-bold">Update Cart</span>
+                                    </a>
+                                    <button id="submit-button" class="btn btn-black rounded-0">
+                                        <span class="font-weight-bold">Complete Order</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </button>
+                                    <p class="small text-danger my-0">
+                                        <span class="icon">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </span>
+                                        <span>Your card will be charged
+                                            <strong>&#8364;{{ grand_total | floatformat:2 }}</strong>
+                                        </span>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+
+            {% block postload_js %}{% endblock %}
