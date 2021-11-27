@@ -20,13 +20,14 @@
             <div class="row">
                 <div class="col">
                     <h2 class="logo-font">
-                        Shopping Cart
+                        Checkout
                     </h2>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12 col-lg-6 order-lg-last mb-5">
+                    <div class="text_muted">Summary ({{ product_count }})</div>
                     <div class="row">
                         <div class="col-7 offset-2">
                             <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -54,7 +55,7 @@
                             <p class="my-0 small text-muted">Quantity:{{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.watch.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted">&#8364;{{ item.watch.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
 
@@ -139,4 +140,9 @@
                 </div>
             {% endblock %}
 
-            {% block postload_js %}{% endblock %}
+            {% block postload_js %}
+                {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+                {{ client_secret|json_script:"id_client_secret" }}
+                <script src="{% static 'checkout/javascript/stripe.js' %}"></script>
+            {{ block.super }}
+            {% endblock %}
