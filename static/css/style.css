@@ -135,6 +135,9 @@ html {
 .logo-font {
     margin-top: 3rem;
 }
+.title-top {
+    margin-top: 7rem;
+}
 .update-link,
 .remove-item {
     cursor: pointer;
