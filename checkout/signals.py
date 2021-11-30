@@ -9,10 +9,10 @@ from .models import OrderLineItem
 
 
 @receiver(post_save, sender=OrderLineItem)
-def order_total_update(sender, instance, created, **kwargs):
-    instance.order.total_update()
+def update_on_save(sender, instance, created, **kwargs):
 
+    instance.order.update_total()
 
 @receiver(post_delete, sender=OrderLineItem)
 def order_total_delete(sender, instance, **kwargs):
-    instance.order.total_update()
+    instance.order.update_total()

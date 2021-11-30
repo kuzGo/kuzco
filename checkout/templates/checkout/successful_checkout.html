@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    {% endblock %}
+
+    {% block page_header %}
+        <div class="container header-contianer">
+            <div class="row">
+                <div class="col"></div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block content %}
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <h2 class="title-top">
+                        Thanks for your purchase!
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-7"></div>
+            </div>
+            <div class="row">
+                <a href="{% url 'watches' %}?category=chronograph,smartwatch,on_sale" class="btn btn-black my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span>Explore our newest products.</span>
+                </a>
+            </div>
+        </div>
+    {% endblock %}
