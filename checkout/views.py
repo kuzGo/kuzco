@@ -1,13 +1,34 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404
+import json
+from django.shortcuts import (
+    render, reverse, redirect, get_object_or_404, HttpResponse)
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 import stripe
 
 from cart.context import cart_items
+
+from products.models import Product
 from .models import Order, OrderLineItem
 from .forms import OrderForm
 
-from products.models import Product
+
+@require_POST
+def saved_info_checkout(request):
+    try:
+        payment_intent_id = request.POST.get(
+            'client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(payment_intent_id, metadata={
+            'cart': json.dumps(request.session.get('cart', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as error:
+        messages.error(request, 'We are unable to process your  \
+            card at the moment. Please try again later.')
+        return HttpResponse(content=error, status=400)
 
 
 def checkout(request):
