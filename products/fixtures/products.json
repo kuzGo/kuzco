@@ -138,5 +138,75 @@
       "sku": "M223-02-008",
       "gender": "Unisex"
     }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 1,
+      "name": "TAG HEUER",
+      "description": "A fusion of cool stainless steel and deep navy blue pushes this sleek TAG Heuer Formula 1 Men's Blue Dial and Bezel Stainless Steel Watch into pole position. Designed with the high-octane Formula 1 ethos in mind, the watch is stocked with many design and function features.",
+      "price": "1268.00",
+      "image": "watch2_Bss3HWg.png",
+      "rating": "3.80",
+      "sku": "M223-02-009",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 3,
+      "name": "Huawei",
+      "description": "Huawei Smartwatch",
+      "price": "496.00",
+      "image": "smartwatch.png",
+      "rating": "4.60",
+      "sku": "M223-02-010",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "category": 2,
+      "name": "EDIFICE SOLAR WATCH",
+      "description": "A chic wristwatch, a sporty watch or a trendy watch with an interchangeable strap? At Brandfield you have a wide choice of the finest watch brands for your unique look. Go for a watch that suits you and enjoy it for years!",
+      "price": "369.00",
+      "image": "edfice.png",
+      "rating": "3.20",
+      "sku": "M223-02-011",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 1,
+      "name": "Rolex",
+      "description": "Rolex Luxury Watch for Men",
+      "price": "2305.00",
+      "image": "rolex2_S8kH063.png",
+      "rating": "4.90",
+      "sku": "M223-02-012",
+      "gender": "Male"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 1,
+      "name": "Rolex Watch",
+      "description": "Rolex Watch For men",
+      "price": "3652.00",
+      "image": "rolex3_SMyrgCR.png",
+      "rating": "5.00",
+      "sku": "M223-02-13",
+      "gender": "Male"
+    }
   }
 ]
