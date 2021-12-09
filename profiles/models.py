@@ -6,7 +6,7 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-class Profile(models.Model):
+class UserProfile(models.Model):
     """  A user profile model  """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -32,5 +32,5 @@ class Profile(models.Model):
         Create or update the user profile
         """
         if created:
-            Profile.objects.create(user=instance)
+            UserProfile.objects.create(user=instance)
         instance.userprofile.save()
