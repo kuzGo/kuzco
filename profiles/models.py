@@ -24,7 +24,7 @@ class Profile(models.Model):
                                    null=True, blank=True, default='')
 
     def __str__(self):
-        return self.user.username
+        return self.user
 
     @receiver(post_save, sender=User)
     def manage_user_profile(sender, instance, created, **kwargs):
