@@ -24,13 +24,13 @@ class UserProfile(models.Model):
                                    null=True, blank=True, default='')
 
     def __str__(self):
-        return self.user
+        return self.user.username
 
     @receiver(post_save, sender=User)
     def manage_user_profile(sender, instance, created, **kwargs):
         """
         Create or update the user profile
         """
-        # if created:
-        UserProfile.objects.create(user=instance)
-        # instance.userprofile.save()
+        if created:
+            UserProfile.objects.create(user=instance)
+        instance.userprofile.save()
