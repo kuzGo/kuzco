@@ -1,0 +1,1 @@
+Your Kuzco Watches Confirmation for Order : {{ order.order_number }}
