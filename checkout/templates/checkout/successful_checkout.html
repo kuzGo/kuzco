@@ -27,12 +27,23 @@
                 <div class="col-12 col-lg-7"></div>
             </div>
             <div class="row">
-                <a href="{% url 'watches' %}?category=chronograph,smartwatch,on_sale" class="btn btn-black my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-gifts"></i>
-                    </span>
-                    <span>Explore our newest products.</span>
-                </a>
+                <div class="col-12 col-lg-7">
+                    {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-black my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span>Return to Profile.</span>
+                    </a>
+                    {% else  %}
+                    <a href="{% url 'watches' %}?category=chronograph,smartwatch,on_sale" class="btn btn-black my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-gifts"></i>
+                        </span>
+                        <span>Explore our newest products.</span>
+                    </a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     {% endblock %}
