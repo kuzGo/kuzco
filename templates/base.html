@@ -137,8 +137,11 @@
         {% block page_header %}{% endblock %}
 
         {% block content %}{% endblock %}
-        {% include 'includes/footer.html' %}
-        
+
+        <footer  class="container-fluid footer-section">
+            {% include 'includes/footer.html' %}
+        </footer>
+
         {% block postload_js %}
         <script type="text/javascript">
             $('.toast').toast('show');
