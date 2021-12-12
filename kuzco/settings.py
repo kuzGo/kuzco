@@ -82,7 +82,6 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -216,7 +215,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
 if 'DEVELOPMENT' in os.environ:
-    DEFAULT_FROM_EMAIL = 'kuzcowatches@gmail.com'
+    DEFAULT_FROM_EMAIL = 'kuzcowatches-noreply@email.com'
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -3,145 +3,91 @@
 {% load cart_tools %}
 
 {% block page_header %}
-    <div class="container header-contianer">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-contianer">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    
-        <div class="container logo-font">
-            <div class="row">
-                <div class="col">
-                    <h2 class="title-top">
-                        Shopping Cart
-                        <h2>
-                    </div>
-                 </div>
 
-                    <div class="row">
-                        <div class="col">
-                            {% if cart_contents %}
-                                <div class="table-responsive rounded">
-                                    <table class="table table-sm-dark table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">SKU</th>
-                                                <th scope="col">Price</th>
-                                                <th scope="col">Quantity</th>
-                                            </tr>
-                                        </thead>
-                                        {% for item in cart_contents %}
-                                            <tr>
-                                                <td class="py-3">
-                                                    <p class="my-0">
-                                                        <strong>{{ item.watch.name }}</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="py-3">
-                                                    <p class="my-0">
-                                                        <strong>{{ item.watch.sku|upper }}</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="py-3">
-                                                    <p class="my-0">&#8364;{{ item.watch.price }}</p>
-                                                </td>
-                                                <td class="py-3">
+<div class="container logo-font">
+    <div class="row">
+        <div class="col">
+            <h2 class="title-top">
+                Shopping Cart
+                <h2>
+        </div>
+    </div>
 
-                                                    <form action="{% url 'update_cart' item.item_id %}" method="POST" class="form update-form">
-                                                        <!-- token required for cross-site request forgery (method POST) -->
-                                                        {% csrf_token %}
-                                                        <div class="form-row">
-                                                            <div class="col-lg-3 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <div class="input-group">
+    <div class="row">
+        <div class="col">
+            {% if cart_contents %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">SKU</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    {% for item in cart_contents %}
+                    <tr>
+                        {% include "cart/wathch_details.html" %}
+                        <td class="py-3">
+                            {% include "cart/quantity.html" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% include "cart/watch_image.html" %}
+                        </td>
+                        <td colspan="5" class="pt-5 text-right">
+                            {% include "cart/checkout_buttons.html" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            {% include "cart/cart_total.html" %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% else %}
+            <p class="mb-5">You have no items in your cart</p>
+            <a href="{% url 'watches' %}" class="btn btn-black btn-lg">Continue Exploring</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 
-                                                                        <div class="input-group-prepend">
-                                                                            <button class="decrement-qty btn btn-sm rounded-0" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                                                <span>
-                                                                                    <i class="fas fa-minus fa-sm"></i>
-                                                                                </span>
-                                                                            </button>
-                                                                        </div>
 
-                                                                        <input type="number" class="form-control form-control-sm qty_input" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id={{ item.item_id }} id="id_qty_{{ item.item_id }}">
+{% endblock %}
 
-                                                                            <div class="input-group-append">
-                                                                                <button class="increment-qty btn btn-sm rounded-0" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                                                    <span>
-                                                                                        <i class="fas fa-plus fa-sm"></i>
-                                                                                    </span>
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <a href="{% url 'watches' %}" class="btn rounded-0 mt-5">
-                                                                        <span class="icon">
-                                                                            <i class="fas fa-chevron"></i>
-                                                                        </span>
-                                                                        <span>Continue Exploring</span>
-                                                                    </a>
-                                                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                                                        <span class="text-uppercase">Secure Checkout</span>
-                                                                        <span class="icon">
-                                                                            <i class="fas fa-lock"></i>
-                                                                        </span>
-                                                                    </a>
-                                                                    <input type="submit" class="btn-danger" value="Add to Cart"></div>
-                                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}"></div>
-                                                                </form>
-                                                                <a class="update-link text-info"><small>Update</small>
-                                                                </a>
-                                                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Empty Your Cart</small></a>
-                                                            </td>
-                                                            <td class="p-3 w-25">
-                                                                <img src="{{ item.watch.image.url }}" alt="{{ item.watch.image.name }}" class="img-fluid">
-                                                            </td>                           
-                                                            </tr>
-                                                            <td class="py-3">
-                                                                <p class="my-0">&#8364;{{ item.watch.price | calc_subtotal:item.quantity }}
-                                                              </p>
-                                                            </td>
-                                                        {% endfor %}
-                                                    </table>
-                                                </div>
-                                            {% else %}
-                                                <p class="mb-5">You have no items in your cart</p>
-                                                <a href="{% url 'watches' %}" class="btn btn-black btn-lg">Continue Exploring</a>
-                                            {% endif %}
-                                        </div>
+{% block postload_js %}
+{{ block.super }}
+{% include 'watches/includes/qty_js.html' %}
+<script type="text/javascript">
 
-                                    </div>
-                                </div>
-                            
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
-                        {% endblock %}
-
-                        {% block postload_js %}
-                            {{ block.super }}
-                            {% include 'watches/includes/qty_js.html' %}
-                            <script type="text/javascript">
-
-                                $('.update-link').click(function(e) {
-                                        var form = $(this).prev('.update-form');
-                                        form.submit();
-                                    })
-                                
-                                    $('.remove-item').click(function(e) {
-                                        var csrfToken = "{{ csrf_token }}";
-                                        var itemId = $(this).attr('id').split('remove_')[1];
-                                        var url = `/cart/remove/${itemId}/`;
-                                        var data = {'csrfmiddlewaretoken': csrfToken};
-                                        $.post(url,data)
-                                         .done(function() {
-                                             location.reload();
-                                         });
-                                    })
-
-                            </script>
-                        {% endblock %}
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
+        $.post(url, data).done(function () {
+            location.reload();
+        });
+    })
+</script>
+{% endblock %}
