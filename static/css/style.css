@@ -99,7 +99,7 @@ html {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background:#1111;
 	z-index: -1;
 }
 .img-fluid {
@@ -130,7 +130,7 @@ html {
 }
 #delivery-banner h4 {
     font-size: 1.9rem;
-    background-color:crimson;
+    background-color:#b7a90c;
 }
 .logo-font {
     margin-top: 3rem;
@@ -262,3 +262,47 @@ button {
   animation: hoverShake 0.25s linear 3;
 }
 
+/* Footer section */
+.media-links {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(10 12 16);
+}
+.media-links:hover {
+    color: rgb(10 12 16);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.media-links li a i {
+    width: 56px;
+    height: 58px;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 36px;
+    line-height: 32px;
+    text-align: center;
+    color: #282828;
+    background-color: #f7ff07;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.media-links li a i:hover {
+    background-color: #db4517;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.footer-section {
+    background-color:#b7a90c;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}

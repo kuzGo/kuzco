@@ -133,13 +133,12 @@
                 </nav>
             </div>
         </header>
-
-       
-
+        
         {% block page_header %}{% endblock %}
 
         {% block content %}{% endblock %}
-
+        {% include 'includes/footer.html' %}
+        
         {% block postload_js %}
         <script type="text/javascript">
             $('.toast').toast('show');
