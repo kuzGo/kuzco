@@ -2,22 +2,23 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-contianer">
-      <div class="row">
-          <div class="col"></div>
-      </div>
-    </div>
+<div class="container header-contianer">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
 {% endblock %}
-   
+
 {% block content %}
 <div class="hero-wrapper">
   <video class="home-video" loop autoplay muted>
-    <source src="{% static 'video/home-video.mp4' type='video/mp4' %}"></video>
-    <div class="vid-overlay"></div>
-    <div class="hero-text">
-      <h3> We believe it's always the right time </h3>
-      <a href="{% url 'watches' %}">Explore our Collection</a>
-    </div>  
+    <source src="{% static 'video/home-video.mp4' type='video/mp4' %}">
+  </video>
+  <div class="vid-overlay"></div>
+  <div class="hero-text">
+    <h3> We believe it's always the right time </h3>
+    <a href="{% url 'watches' %}">Explore our Collection</a>
+  </div>
 </div>
 
 {% endblock %}

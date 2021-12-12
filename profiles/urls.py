@@ -1,3 +1,6 @@
+"""
+Provides URL path to Customer's profile
+"""
 from django.urls import path
 from . import views
 

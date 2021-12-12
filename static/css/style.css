@@ -104,14 +104,12 @@ html {
 }
 .img-fluid {
     max-width: 100%;
-    height: 29vh;
     width: 100%;
-    height: 20vw;
+    height: 15vw;
     object-fit: contain;
 }
 .img-detail{
     max-width: 100%;
-    height: 29vh;
     width: 100%;
     height: 38vw;
     object-fit: contain;
@@ -186,6 +184,13 @@ html {
     }
     .mob-nav {
         padding: 10px;
+    }
+    .title-top {
+        margin-top: 13rem;
+        font-size: 26px;
+    }
+    .table td, .table th {
+        padding: 2.7px 2px !important
     }
 }
 
@@ -291,7 +296,7 @@ button {
 }
 
 .media-links li a i:hover {
-    background-color: #db4517;
+    background-color: #8a3f29;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);

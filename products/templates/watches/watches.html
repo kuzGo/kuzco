@@ -2,94 +2,107 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center logo-font">
-                <h2 class="logo-font">Our Collection of Watches</h2>
-                <hr></div>
-            </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center logo-font">
+            <h2 class="logo-font">Our Collection of Watches</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
             <div class="row">
-                <div class="container col-10 offset-1">
-                    <div class="row mt-1 mb-2"></div>
-                    <div class="row">
-                        {% for watch in page.object_list %}
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="card h-100 border-0">
-                                    {% if watch.image %}
-                                        <a href="{% url 'watch_detail' watch.id %}">
-                                            <img class="card-img-top img-fluid" src="{{ watch.image.url }}" alt="{{ watch.name }}"></a>
-                                        {% else %}
-                                            <a href="{% url 'watch_detail' watch.id %}">
-                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ watch.name }}"></a>
-                                            {% endif %}
-                                            <div class="card-body pb-0">
-                                                <p class="mb-0">{{ watch.name }}</p>
-                                            </div>
-                                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="lead mb-0 text-left font-weight-bold">
-                                                            &#8364;{{ watch.price }}</p>
-                                                        {% if watch.rating %}
-                                                            <small class="text-muted">
-                                                                <i class="fas fa-star mr-1"></i>
-                                                                {{ watch.rating }}
-                                                                / 5</small>
-                                                        {% else %}
-                                                            <small class="text-muted">No Rating</small>
-                                                        {% endif %}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% if forloop.counter|divisibleby:1 %}
-                                        <div class="col-12 d-sm-none mb-5">
-                                            <hr></div>
-                                        {% endif %}
-                                        {% if forloop.counter|divisibleby:2 %}
-                                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                                <hr></div>
-                                            {% endif %}
-                                            {% if forloop.counter|divisibleby:3 %}
-                                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                                    <hr></div>
-                                                {% endif %}
-                                                {% if forloop.counter|divisibleby:4 %}
-                                                    <div class="col-12 d-none d-xl-block mb-5">
-                                                        <hr></div>
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                    </div>
+                {% for watch in page.object_list %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        {% if watch.image %}
+                        <a href="{% url 'watch_detail' watch.id %}">
+                            <img class="card-img-top img-fluid" src="{{ watch.image.url }}" alt="{{ watch.name }}"></a>
+                        {% else %}
+                        <a href="{% url 'watch_detail' watch.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ watch.name }}"></a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ watch.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">
+                                        &#8364;{{ watch.price }}</p>
+                                    
+                                    {% if watch.rating %}
+                                    <small class="text-muted">
+                                        <i class="fas fa-star mr-1"></i>
+                                        {{ watch.rating }}
+                                        / 5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 offset-6">
-                                        <nav aria-label="Page navigation">
-                                            <ul class="pagination">
-                                                {% if page.has_previous %}
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="{% url 'watches' %}?page={{ page.previous_page_number }}">&#8592; Previous</a>
-                                                    </li>
-                                                {% endif %}
-                                                <li class="page-link">{{ page.number }}</li>
-                                                {% if page.has_next %}
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="{% url 'watches' %}?page={{ page.next_page_number }}">Next &#8594;</a>
-                                                    </li>
-                                                {% endif %}
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 offset-6">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                {% if page.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'watches' %}?page={{ page.previous_page_number }}">&#8592;
+                        Previous</a>
+                </li>
+                {% endif %}
+                <li class="page-link">{{ page.number }}</li>
+                {% if page.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'watches' %}?page={{ page.next_page_number }}">Next &#8594;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+{% block postload_js %}
+{{ block.super }}
+{% include 'watches/includes/qty_js.html' %}
+{% endblock %}
