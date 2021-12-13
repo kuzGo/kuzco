@@ -1,11 +1,11 @@
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models.functions import Lower
+
 from .models import Review
 from .forms import ReviewForm
-from products.models import Product
-from django.db.models.functions import Lower
 
 
 def reviews_total(request):
@@ -64,3 +64,48 @@ def add_reviews(request):
         'form': form,
     }
     return render(request, template, context)
+
+
+@login_required
+def update_reviews(request, review_id):
+
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, only authorised users" +
+                       "can update reviews")
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(Review, pk=review_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Review updated successfully")
+            return redirect(reverse('update_reviews'))
+        else:
+            messages.error(
+                request, "Update failed. Please ensure the form is valid.")
+            return redirect(reverse('reviews_total'))
+    else:
+        form = ReviewForm(instance=review)
+        messages.info(request, f'You are editing {review.name}')
+
+    template = 'reviews/update_review.html'
+
+    context = {
+        'form': form,
+        'review': review,
+    }
+    return render(request, template, context)
+
+
+@login_required
+def remove_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    if request.user.is_superuser or review.username == request.user:
+        review.delete()
+        messages.success(request, "Review has been removed" +
+                         "successfuly")
+    else:
+        messages.error(request, 'Sorry, we could not' +
+                       'delete you review at this time')
+        return redirect(reverse('reviews_total'))

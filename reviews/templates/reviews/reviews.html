@@ -13,8 +13,8 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center logo-font">
-            <h2 class="logo-font">Reviews</h2>
+        <div class="col text-center">
+            <h2>Reviews</h2>
             <hr>
         </div>
     </div>
@@ -30,18 +30,23 @@
                         {% else %}
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ review.watches.name }}">
                         {% endif %}
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">
+                                {{ review.title }}</p>
+                        </div>
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">
+                                {{ review.review }}</p>
+                        </div>
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ review.created }}</p>  
                         </div>
-                        <div class="card-body pb-0">
-                            <p class="mb-0">{{ review.username }}</p>  
-                        </div>
+                      
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
-                                <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">
-                                        {{ review.title }}</p>
-                                </div>
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ review.username }}</p>  
+                                </div>                           
                             </div>
                         </div>
                     </div>

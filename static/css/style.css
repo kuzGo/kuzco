@@ -120,11 +120,6 @@ html {
 .img-detail:hover {
     height: 39vw;
     transition: ease-in-out 0.8s;
-
-}
-.img-fluid:hover{
-    height: 22vw;
-    transition: ease-in-out 0.8s;
 }
 .header-container {
     padding-top: 134px;
@@ -309,19 +304,10 @@ button {
 }
 #footer{
     background-color:#b7a90c;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width:100%;
     padding: 10px 10px 0px 10px;
     overflow: hidden;
     text-align: center;
 }
-/* .footer-section {
-    background-color:#b7a90c;
-    position: fixed;
-    bottom: 0;
-    width:100%;
-    padding: 10px 10px 0px 10px;
-    overflow: hidden;
-    text-align: center;
-} */

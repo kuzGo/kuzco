@@ -39,7 +39,7 @@
 
     <body>
 
-        <header class="container-fluid fixed-top">
+        <header class="container-fluid sticky-top">
             <div id="delivery-banner" class="row text-center">
                 <div class="col bg-black text-white">
                     <h4 class="logo-font my-1">Free delivery on orders over &#8364;{{ free_delivery_treshold }}!</h4>
@@ -140,7 +140,7 @@
 
         {% block content %}{% endblock %}
 
-        <footer id="footer" class="container-fluid footer-section">
+        <footer id="footer" class="container-fluid">
             {% include 'includes/footer.html' %}
         </footer>
 
