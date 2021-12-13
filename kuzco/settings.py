@@ -14,10 +14,11 @@ from pathlib import Path
 
 
 import os
+import dj_database_url
 if os.path.exists("env.py"):
     import env
 
-import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -216,7 +217,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
 if 'DEVELOPMENT' in os.environ:
-    DEFAULT_FROM_EMAIL = 'kuzcowatches-noreply@email.com'
+    DEFAULT_FROM_EMAIL = 'kuzcowatches@gmail.com'
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

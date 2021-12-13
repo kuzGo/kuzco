@@ -63,7 +63,10 @@ html {
 .nav-link {
     color: rgb(235, 19, 19) !important;
 }
-
+.page-link {
+    background: black!important;
+    color: #b6a90c!important;
+}
 .hero-text {
     position: relative;
     z-index: 10;
