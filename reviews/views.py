@@ -5,6 +5,40 @@ from django.contrib import messages
 from .models import Review
 from .forms import ReviewForm
 from products.models import Product
+from django.db.models.functions import Lower
+
+
+def reviews_total(request):
+
+    reviews = Review.objects.all()
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sorting = request.GET['sort']
+            sort = sorting
+            if sorting == 'username':
+                reviews = reviews.annotate(
+                    lower_username=Lower('username__username'))
+            if sorting == 'watches':
+                sorting = 'watches__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sorting = f'-{sorting}'
+            reviews = reviews.order_by(sorting)
+
+    current_sorting = f'{sort}_{direction}'
+
+    template = 'reviews/reviews.html'
+
+    context = {
+        'reviews': reviews,
+        'current_sorting': current_sorting,
+    }
+
+    return render(request, template, context)
 
 
 @login_required

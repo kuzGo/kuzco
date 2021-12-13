@@ -77,7 +77,8 @@
                                     {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                    <a href="{% url 'add_reviews' %}" class="dropdown-item">Reviews</a>
+                                    <a href="{% url 'reviews_total' %}" class="dropdown-item">Reviews</a>
+                                    <a href="{% url 'add_reviews' %}" class="dropdown-item">Add Reviews</a>
                                 {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
@@ -88,7 +89,7 @@
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'shopping_cart' %}">
                                 <div class="text-center">
                                     <div>
-                                        <i class="fas fa-shopping-bag fa-lg"></i>
+                                        <i class="fas fa-shopping-cart fa-lg"></i>
                                     </div>
                                     <p class="my-0">
                                         {% if grand_total %}
@@ -139,7 +140,7 @@
 
         {% block content %}{% endblock %}
 
-        <footer  class="container-fluid footer-section">
+        <footer id="footer" class="container-fluid footer-section">
             {% include 'includes/footer.html' %}
         </footer>
 

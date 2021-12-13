@@ -307,10 +307,21 @@ button {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
-.footer-section {
+#footer{
     background-color:#b7a90c;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    padding: 10px 10px 0px 10px;
     overflow: hidden;
     text-align: center;
 }
+/* .footer-section {
+    background-color:#b7a90c;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    padding: 10px 10px 0px 10px;
+    overflow: hidden;
+    text-align: center;
+} */

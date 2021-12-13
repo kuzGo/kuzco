@@ -49,7 +49,7 @@ def all_watches(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    watches_paginator = Paginator(watches, 4)
+    watches_paginator = Paginator(watches, 8)
 
     page_num = request.GET.get('page')
 
