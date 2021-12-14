@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -34,8 +36,11 @@ html {
 .navbar {
     padding: 0 0.8000000000000007rem !important;
     max-height: 20px;
+    background-color: rgba(6, 6, 6, 0.7);
 }
-
+#topnav {
+    background-color: rgba(6, 6, 6, 0.7);
+}
 .hero-wrapper {
     position: absolute;
     right: 0;
@@ -189,7 +194,12 @@ html {
         font-weight: 700;
         margin-top: 50%;
     }
-
+    .logo-font {
+        margin-top: 6rem;
+    }
+    .media-links {
+        font-size: 14px!important;
+    }
     .hero-text a {
         font-size: 0.6em !important;
         left: 0 !important;
@@ -321,11 +331,6 @@ button {
   25% {-webkit-transform: skew(5deg, 5deg);transform: skew(5deg, 5deg);}
   75% {-webkit-transform: skew(-5deg, -5deg);transform: skew(-5deg, -5deg);}
   100% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
-}
-
-.search-container:hover{
-  -webkit-animation: hoverShake 0.25s linear 3;
-          animation: hoverShake 0.25s linear 3;
 }
 
 /* Footer section */
