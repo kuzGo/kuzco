@@ -32,7 +32,7 @@ html {
 }
 
 .navbar {
-    padding: 0 -1.8000000000000007rem !important;
+    padding: 0 0.8000000000000007rem !important;
     max-height: 20px;
 }
 
@@ -243,7 +243,6 @@ html {
         left: 0;
         z-index: 1030;
     }
-
     .header-container {
         padding-top: 164px;
     }
