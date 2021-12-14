@@ -77,10 +77,10 @@ html {
     background: #b7a90c;
     mix-blend-mode: overlay;
 }
-
-.nav-link {
-    color: rgb(235, 19, 19) !important;
+.nav-link{
+    color: #b6a90c!important;
 }
+
 .page-link {
     background: black!important;
     color: #b6a90c!important;
@@ -102,6 +102,9 @@ html {
 }
 
 .hero-text a {
+    position: absolute;
+    top: 112%;
+    left: 36%;
     display: inline-block;
     font-size: 1em;
     background: #fff;
@@ -157,6 +160,7 @@ html {
 }
 .title-top {
     margin-top: 7rem;
+    min-height: calc(100vh - 300px);
 }
 .update-link,
 .remove-item {
@@ -188,6 +192,8 @@ html {
 
     .hero-text a {
         font-size: 0.6em !important;
+        left: 0 !important;
+        
     }
 
     .navbar-nav {

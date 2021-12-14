@@ -36,6 +36,8 @@ def add_to_cart(request, item_id):
 
 
 def update_cart(request, item_id):
+    """Modifies the items of the shopping cart"""
+
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
@@ -54,6 +56,7 @@ def update_cart(request, item_id):
 
 
 def delete_item(request, item_id):
+    """Removes the items from the shopping cart"""
     try:
         product = get_object_or_404(Product, pk=item_id)
         cart = request.session.get('cart', {})

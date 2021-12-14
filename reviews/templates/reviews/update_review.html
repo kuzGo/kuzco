@@ -28,10 +28,10 @@
             <form action="{% url 'update_reviews' review.id %}" method="POST" enctype="multipart/form-data" class="mt-3">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn btn-black rounded-0 text-uppercase float-right">
+                <button type="submit" class="btn btn-outline-success rounded-0 text-uppercase float-right">
                     Update Watch Review
                 </button>
-                <a href="{% url 'reviews_total' %}" class="btn btn-black rounded-0 text-uppercase">Back to Reviews</a>
+                <a href="{% url 'reviews_total' %}" class="btn btn-outline-secondary rounded-0 text-uppercase">Back to Reviews</a>
             </form>
         </div>
         {% endblock %}
