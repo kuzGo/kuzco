@@ -10,7 +10,7 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """Display the users profile"""
-    
+
     profile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)

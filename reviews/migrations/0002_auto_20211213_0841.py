@@ -17,11 +17,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='review',
             name='username',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='reviews', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
             model_name='review',
             name='watches',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='reviews', to='products.product'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    related_name='reviews', to='products.product'),
         ),
     ]

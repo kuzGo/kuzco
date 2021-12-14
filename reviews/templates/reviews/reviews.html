@@ -49,6 +49,9 @@
                                 </div>                           
                             </div>
                         </div>
+                        <a href="{% url 'update_reviews' review.id %}" class="btn btn-black rounded-0 text-uppercase">Update Review</a>
+                        
+                        <a href="{% url 'remove_review' review.id %}" class="btn btn-black rounded-0 text-uppercase">Remove Review</a>
                     </div>
                 </div>
                 {% endfor %}
