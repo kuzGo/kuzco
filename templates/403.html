@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-contianer">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="hero-wrapper">
+  <video class="home-video" loop autoplay muted>
+    <source src="{% static 'video/home-video.mp4' type='video/mp4' %}">
+  </video>
+  <div class="vid-overlay"></div>
+  <div class="hero-text">
+    <h3> Ooops, ERROR 403! </h3>
+    <a href="{% url 'home' %}">Return Home</a>
+  </div>
+</div>
+
+{% endblock %}

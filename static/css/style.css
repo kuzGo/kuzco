@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
@@ -11,14 +12,22 @@ html {
 
 /* Used from Boutique Ado project , Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -33,10 +42,18 @@ html {
     width: 100%;
     min-height: 100vh;
     padding: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: #111;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     z-index: 2;
 }
@@ -47,7 +64,8 @@ html {
     left: 0;
     width: 100%;
     height: 100vh;
-    object-fit:cover;
+    -o-object-fit:cover;
+       object-fit:cover;
 }
 
 .vid-overlay {
@@ -94,6 +112,8 @@ html {
     margin-top: 10px;
     color: #111;
     letter-spacing: 2px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 .overlay {
@@ -109,16 +129,20 @@ html {
     max-width: 100%;
     width: 100%;
     height: 15vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 .img-detail{
     max-width: 100%;
     width: 100%;
     height: 38vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 .img-detail:hover {
     height: 39vw;
+    -webkit-transition: ease-in-out 0.8s;
+    -o-transition: ease-in-out 0.8s;
     transition: ease-in-out 0.8s;
 }
 .header-container {
@@ -138,6 +162,7 @@ html {
 .remove-item {
     cursor: pointer;
 }
+/* Boutique Ado styling  */
 .messages-container {
     position: fixed;
     top: 102px;
@@ -150,6 +175,7 @@ html {
 .toast-capper {
     height: 2px;
 }
+/* END of Boutique Ado styling  */
 
 /* Smartphones portrait and landscape orientation  */
 @media only screen and (min-width: 320px) and (max-width: 823px) {
@@ -166,16 +192,25 @@ html {
 
     .navbar-nav {
         display: -ms-flexbox;
+        display: -webkit-box;
         display: flex;
         -ms-flex-direction: column;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
-        align-content: stretch;
-        justify-content: space-between;
-        align-items: stretch;
-        flex-wrap: wrap;
+        -ms-flex-line-pack: stretch;
+            align-content: stretch;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .img-fluid {
         height: 58vw!important;
@@ -191,7 +226,7 @@ html {
         padding: 2.7px 2px !important
     }
 }
-
+/* Boutique Ado styling  */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -213,6 +248,7 @@ html {
         padding-top: 164px;
     }
 }
+/* END OF Boutique Ado styling  */
 
 /* search bar animation */
 button {
@@ -224,12 +260,24 @@ button {
     height: 50px;
     border-radius: 30px;
     padding: 10px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
     transition: 0.8s;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+    -webkit-box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+            box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
               -4px -4px 6px 0 rgba(116, 125, 136, .2),
     inset -4px -4px 6px 0 rgba(255,255,255,.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
@@ -246,6 +294,8 @@ button {
     width: 0px;
     font-weight: 500;
     font-size: 16px;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
     transition: 0.8s;
 
 }
@@ -254,15 +304,23 @@ button {
     color: #5cbdbb;
 }
 
+@-webkit-keyframes hoverShake {
+  0% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
+  25% {-webkit-transform: skew(5deg, 5deg);transform: skew(5deg, 5deg);}
+  75% {-webkit-transform: skew(-5deg, -5deg);transform: skew(-5deg, -5deg);}
+  100% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
+}
+
 @keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
+  0% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
+  25% {-webkit-transform: skew(5deg, 5deg);transform: skew(5deg, 5deg);}
+  75% {-webkit-transform: skew(-5deg, -5deg);transform: skew(-5deg, -5deg);}
+  100% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
 }
 
 .search-container:hover{
-  animation: hoverShake 0.25s linear 3;
+  -webkit-animation: hoverShake 0.25s linear 3;
+          animation: hoverShake 0.25s linear 3;
 }
 
 /* Footer section */
@@ -304,7 +362,7 @@ button {
 }
 #footer{
     background-color:#b7a90c;
-    position: sticky;
+    position: relative;
     bottom: 0;
     width:100%;
     padding: 10px 10px 0px 10px;
