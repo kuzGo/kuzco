@@ -6,6 +6,9 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
+body{
+    font-family: 'Lato', sans-serif;
+}
 
 html {
     height: 100%;
@@ -165,7 +168,6 @@ html {
 }
 .title-top {
     margin-top: 7rem;
-    min-height: calc(100vh - 300px);
 }
 .update-link,
 .remove-item {
@@ -198,6 +200,9 @@ html {
         margin-top: 6rem;
     }
     .media-links {
+        font-size: 14px!important;
+    }
+    .media-links li a i {
         font-size: 14px!important;
     }
     .hero-text a {

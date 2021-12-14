@@ -120,6 +120,9 @@ To see Project Wireframes please click the link:
 ## Testing :
 <a name="testing"/>
 
+- Testing file can be found here [TESTING.md](https://github.com/kuzGo/kuzco/blob/main/TESTING.md) 
+
+
 
 
 ## Deployment
