@@ -39,19 +39,26 @@
                                 {{ review.review }}</p>
                         </div>
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ review.created }}</p>  
+                            <p class="mb-0">Review posted: {{ review.created }}</p>  
+                        </div>
+                        <div class="card-body pb-0">
+                            <p class="mb-0">Updated: {{ review.updated}}</p>  
                         </div>
                       
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ review.username }}</p>  
+                                    <p class="mb-0">Reviewed by: {{ review.username }}</p>  
                                 </div>                           
                             </div>
                         </div>
-                        <a href="{% url 'update_reviews' review.id %}" class="btn btn-black rounded-0 text-uppercase">Update Review</a>
-                        
-                        <a href="{% url 'remove_review' review.id %}" class="btn btn-black rounded-0 text-uppercase">Remove Review</a>
+                        <div class="row">
+                            <div class="col">
+                            <a href="{% url 'update_reviews' review.id %}" class="btn btn-black rounded-0 text-center">Update</a>
+
+                            <a href="{% url 'remove_review' review.id %}" class="btn btn-black rounded-0 text-center">Remove</a>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
