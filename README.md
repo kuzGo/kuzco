@@ -57,35 +57,6 @@ other keywords.
 ## Existing features
 <a name="existing"/>
 
-- Landing Page
-
-- Navigation bar
-    * Company Logo
-    * Home Button
-    * Login Button
-    * Register Button
-
-- Mobile sidenav for mobile devices
-    * Company Logo
-    * Home Button
-    * Login Button
-    * Register Button
-
-- Image slides with text content describing purpose of the website.
-
-- Three card panels inviting users to register.
-- Web site footer
-    * Company logo
-    * Copyright 
-    * Useful links
-- Login page
-- Register page
-- Error 404 page
-    * Will appear in case of when the server can't find the requested resource.
-- Error 500 page
-    * Will appear in case if the server encountered an unexpected condition.
-
-
 ### Registered users
 
 - Registered users have access to most of the features apart from the admin's page.
@@ -100,6 +71,14 @@ other keywords.
             * Reviews;
             * Logout;
         * Shopping Cart;
+        - Login page
+- Register page
+- Error 404 page
+    * Will appear in case of when the server can't find the requested resource.
+- Error 4043 page
+    * Will appear in case of Forbidden response status.
+- Error 500 page
+    * Will appear in case if the server encountered an unexpected condition.
 
     * Sorting;
         * All Watches;
@@ -200,7 +179,7 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 
 
 ## Other Technologies used:
-
+- [**Stripe**](https://stripe.com/) Used for implementing payment option
 - [**SQLite3**](https://www.heroku.com/) Django's default database.
 - [**heroku-postgresql**](https://www.heroku.com/) Heroku's database.
 - [**Heroku**](https://www.heroku.com/)  used for hosting deployed website.
