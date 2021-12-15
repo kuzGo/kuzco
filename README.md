@@ -1,10 +1,15 @@
+# [Kuzco Watches](https://kuzco-watches.herokuapp.com/)
 <a name="totop"/>
 
-## <p><img src="#"></p>
+## <p><img src="Docs/amiresponsivekuzco.PNG" style="min-width:100%" height="500" alt="Photo of website on devices"></p>
 ---
-<p> <img src="#"></p>
+<p> <img src="Docs/favicon.png" width="80" height="80" alt="Company logo">></p>
 
-- Link to live website 
+- Link to live website [Kuzco Watches](https://kuzco-watches.herokuapp.com/)
+---
+Kuzco Watches is a final project with the [Code Institute](https://codeinstitute.net/ie/).
+Project purpose:
+In this project, I built a full-stack site based around business logic used to control a centrally-owned dataset. An authentication mechanism has been set and provides paid access to the site's data and/or other activities based on the dataset, such as the purchase of a product.
 
 ##### Table of Contents  
 - [UX](#ux)  
@@ -24,36 +29,142 @@
 
 ### User Stories
 
-- User 1 : As a user I want to
-- User 2 : As a user I want to 
-- User 3 : As a user I want to 
-- User 4 : As a user I want to be able to 
-- User 5 : As a user I want to 
+- User 1 : As a user I want to view all available watches and their ratings and prices.
+- User 2 : As a user I want to search for specific watches using type, description or     
+other keywords.
+- User 3 : As a user I want to view individually each watch's details and description.
+- User 4 : When purchasing, I want to know the price I spent while browsing the site.
+- User 5 : As a regular user I want to be able to register easily. 
 - User 6 : As a user I want to be able to register as a regular user.
-- User 7 : As a user I want to be able to 
+- User 7 : As a returning user I want to be able to login to my account. 
+- User 8 : I want to be notified by email when registered.
+- User 9 : I want to have my own profile on the website.
+- User 10 : I want to make a secure payment.
+- User 11 : I want to save and update my payment details.
+- User 12 : I want to be able to leave a review of the watch I purchased.
+- User 13 : I want to be able to update or remove items from my shopping cart.
+- User 14 : I want to receove an email confirmation about my purchase.
 
 ### The Site owner Goals
 <a name="usergoals"/>
+
+- Owner 1 : As a site owner I want to I want to have admin rights.
+- Owner 2: As a site owner I want to be able to add and remove products.
+- Owner 3 : As a site owner I want to be able to update products.
 
 
 
 ## Existing features
 <a name="existing"/>
 
+- Landing Page
 
+- Navigation bar
+    * Company Logo
+    * Home Button
+    * Login Button
+    * Register Button
+
+- Mobile sidenav for mobile devices
+    * Company Logo
+    * Home Button
+    * Login Button
+    * Register Button
+
+- Image slides with text content describing purpose of the website.
+
+- Three card panels inviting users to register.
+- Web site footer
+    * Company logo
+    * Copyright 
+    * Useful links
+- Login page
+- Register page
+- Error 404 page
+    * Will appear in case of when the server can't find the requested resource.
+- Error 500 page
+    * Will appear in case if the server encountered an unexpected condition.
+
+
+### Registered users
+
+- Registered users have access to most of the features apart from the admin's page.
+
+- Landing page;
+
+    * Search bar;
+        * Info delivery banner;
+        * Search button;
+        * My Profile;
+            * Profile;
+            * Reviews;
+            * Logout;
+        * Shopping Cart;
+
+    * Sorting;
+        * All Watches;
+        * For Him;
+        * For Her;
+        * Gifts & Deals;
+
+     
+- All Watches Page
+    * Search bar;
+    * Shopping Cart;
+    * Cards with images, prices and ratings of the watches;       
+    * Paginator;       
+    * Footer;
+
+- Watch Details Page
+    * Search bar;
+    * Shopping Cart;
+    * Card with image, price and rating of the watch;       
+    * Add to cart button;       
+    * Continue Exploring button;       
+    * Submit Review button;       
+    * Paginator;       
+    * Footer;
+
+- Shopping Cart Page
+    * Search bar;
+    * Item image;
+    * Item name;
+    * Item SKU number;
+    * Item price;
+    * Item quantity;
+         * Ability to update quantity;
+         * Ability to remove item;
+    * Subtotal including delivery charges;
+    * Checkout button;
+    * Continue to Explore button;
+- Checkout Page
+    * Search bar;
+    * Form for personal details;
+    * Card input;
+    * Image and description of the item(s);
+- Review Page
+    * Search bar;
+    * Form to submit reviews;
+    * List of all reviews;
+    * Abilty to remove/update your own reviews;
+
+   
+- Admin page
+    * Restricted to admin only.
 
 ## Admin
-
+- Admin page consists of the product abn categories sections. Admin has a right to edit and/or remove products,categories,users and reviews.
+    * Ability to remove and update existing categories.
+    * Ability to remove and update existing Products.
+    * Ability to remove and update existing Reviews.
+    * Ability to verify emails.
 
 ## Color scheme
-
-
-
- <p><img src="static/docs/color-scheme-ms3.PNG" style="min-width:100%" height="200" alt="Color scheme"></p>
-
+Carefully selected color scheme with the idea in mind to create harmonious and aesthetically pleasing website where users would want to remain longer.
+Main colour is #b7a90c which has a touch of golden shades and the black colour which blends together and leaves an expression of elecancy.
 
 - Typography
-    
+     <p><img src="Docs/font.PNG" style="min-width:90%" height="300" alt="Color scheme"></p>
 
 ## Features Left to Implement
 <a name="leftfeatures"/>
@@ -71,30 +182,37 @@
 <a name="prequrements"/>
 
 
+Build a Django project backend by a relational database to create a website that allows users to store and manipulate data records about a particular domain.
+Relational database (MySQL or Postgres),Stripe payments.
+
 
 ### Main Technologies:
 
-
-
-
+HTML, CSS, JavaScript/jQuery, Python+Django
 
 ## Frameworks and libraries:
 <a name="flibs"/>
 
 
-
+- [**Django**](https://www.djangoproject.com/) full stack frameworks used for most of the website functionalities.
 - [**jQuery**](https://jquery.com/) used as a JavaScript library and for Materialize components  initialization.
+- [**Bootsrap4**](https://getbootstrap.com/) used as a front-end framework.
+
 
 ## Other Technologies used:
 
+- [**SQLite3**](https://www.heroku.com/) Django's default database.
+- [**heroku-postgresql**](https://www.heroku.com/) Heroku's database.
 - [**Heroku**](https://www.heroku.com/)  used for hosting deployed website.
+- [**AWS S3**](https://aws.amazon.com/s3/?nc2=type_a) used as a storage for static files.
 - [**Google Dev Tools**](https://developer.chrome.com/docs/devtools/) used for developing and testing webpage.
 - [**Firefox Dev Tools**](https://developer.mozilla.org/en-US/docs/Tools) used for developing and testing webpage.
-- [**Get Waves**](https://getwaves.io/) used to generate SVG banner.
 - [**Balsamiq**](https://balsamiq.com) used for creating a wireframe.
 - [**Resize Pixel**](https://www.resizepixel.com/) Free online image editor used to resize images format.
 - [**Google Fonts**](https://fonts.google.com) used for project fonts.
-- [**Google Icons**](https://fonts.google.com/icons) used for project icons.
+- [**Font Awesome**](https://fontawesome.com/v5.15/icons?d=gallery&p=2) used for project icons.
+- [**Ignore X-Frame headers**](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe/related) used to make override Django's Clickjacking Protection.
+
 - [**Gitpod**](https://gitpod.io) used as a development environment.
 - [**Gitpod Chrome Extension**](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) used to open Github repo in Gitpod.
 - [**GitHub**](https://github.com/) used for storing repository. 
@@ -136,13 +254,13 @@ To see Project Wireframes please click the link:
 
 - How to fork a repository: Forking a repository allows you to make changes to the code without affecting the project. To fork a repository follow the next steps:
 1. If you do not have one,create a [GitHub](https://github.com/) account and remain logged in.
-2. Navigate to [kuzGo/MS3-Project-CI](https://github.com/kuzGo/MS3-Project-CI);
+2. Navigate to [kuzGo/kuzco](https://github.com/kuzGo/kuzco);
 3. In the top right corner find the "Fork" icon.
 4. Click the Fork icon to fork the repository.
 
 - How to clone repository: Cloning repository allows you to pull down a full copy of the repository and work on it locally on your machine. To clone a repository follow these steps:
 1. If you do not have one,create a [GitHub](https://github.com/) account and remain logged in.
-2. Navigate to [kuzGo/MS3-Project-CI](https://github.com/kuzGo/MS3-Project-CI);
+2. Navigate to [kuzGo/kuzco](https://github.com/kuzGo/kuzco);
 3. On the repository main page navigate to the "Code" drop down menu button and click on it.
 4. Ensure to select HTTPS and click on the clipboard icon to copy the URL.
 5. In the IDE you chose to work, open the new terminal.
@@ -173,10 +291,9 @@ In order to successfully  run the app on Heroku,there are a few applications and
 9. Enter repository name and click Search button.
 10. Once repository is found click Connect button.
 11. Navigate to settings and click Reveal Config Vars.
-<p><img src="static/docs/configvars.PNG" style="min-width:30%" height="100" alt="Heroku App snip"></p>
+12. Enter variables from `env.py` file :AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,STRIPE_SECRET_KEY,STRIPE_WH_SECRET, SECRET_KEY. This is required step since Heroku will not be able to find these secured in `gitignore` folder.
 
-12. Enter variables from `env.py` file : IP , MONGODB_NAME, MONGO_URI, PORT and SECRET_KEY. This is required step since Heroku will not be able to find these secured in `gitignore` folder.
-<p><img src="static/docs/vars.PNG" style="min-width:30%" height="100" alt="Heroku App snip"></p>
+<p><img src="Docs/confvars.PNG" style="min-width:30%" height="100" alt="Heroku App snip"></p>
 
 13. Prior to enabling automatic deployment, make sure that requirements.txt and Procfile are pushed (`git push`)to GitHub.
 14. Click Deploy Branch button.
@@ -187,9 +304,10 @@ In order to successfully  run the app on Heroku,there are a few applications and
 
 ### Code snippets :
 
+For the purpose of this project I refered to and used authentication from the Code Institute Chris's [Boutique ADO](https://github.com/Code-Institute-Solutions/boutique_ado_v1).
+The code snnipets used from this project have been refactored to make them my own and suit more my project's needs where it was possible.
 
-
-
+[**Bootsrap4**](https://getbootstrap.com/) some components and some code snnipets have been used from Bootsrap.
 
 ### Photographers :
 
@@ -219,13 +337,20 @@ In order to successfully  run the app on Heroku,there are a few applications and
  
  [Alex Carollo](https://www.pexels.com/photo/black-citizen-analog-watch-592815/)
  
-
+### Text Content:
+Description of the watches have been taken mostly from established/official websites but these descriptions do not match real products.
+It is used for purely educational purposes.
 
 
 ## Acknowledgements
 <a name="ack"/>
 
-
+- I wanted to thank [Nishant Kumar](https://github.com/nishant8BITS), for all the support and pieces of advice during mentoring sessions on how to improve the project.
+- Code Institute for equipping me with the skills and knowledge to complete this project.
+- Friends and family for support,motivation and creating activity datasets.
+- Some parts of the README.md file have been used in my previous project.
+- Slack comunity who helped me with fixing the bugs.
+- Code Istitute Tutors : Jo,Sean,Igor,Shely and many others who helped me out of some hard times I had during my work on the project.
 
 ### Site is for educational purposes
 
