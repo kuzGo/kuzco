@@ -198,7 +198,7 @@ html {
         margin-top: 6rem;
     }
     .media-links {
-        font-size: 14px!important;
+        font-size: 24px!important;
     }
     .media-links li a i {
         font-size: 14px!important;
@@ -356,6 +356,7 @@ button {
     font-size: 36px;
     line-height: 32px;
     text-align: center;
+    margin: 9px;
     color: #282828;
     background-color: #f7ff07;
     transition: all 0.35s ease-in-out;
@@ -381,4 +382,7 @@ button {
     padding: 10px 10px 0px 10px;
     overflow: hidden;
     text-align: center;
+}
+.paginatior{
+    margin-top: 26px;
 }

@@ -35,15 +35,14 @@ other keywords.
 - User 3 : As a user I want to view individually each watch's details and description.
 - User 4 : When purchasing, I want to know the price I spent while browsing the site.
 - User 5 : As a regular user I want to be able to register easily. 
-- User 6 : As a user I want to be able to register as a regular user.
-- User 7 : As a returning user I want to be able to login to my account. 
-- User 8 : I want to be notified by email when registered.
-- User 9 : I want to have my own profile on the website.
-- User 10 : I want to make a secure payment.
-- User 11 : I want to save and update my payment details.
-- User 12 : I want to be able to leave a review of the watch I purchased.
-- User 13 : I want to be able to update or remove items from my shopping cart.
-- User 14 : I want to receove an email confirmation about my purchase.
+- User 6 : As a returning user I want to be able to login to my account. 
+- User 7 : I want to be notified by email when registered.
+- User 8 : I want to have my own profile on the website.
+- User 9 : I want to make a secure payment.
+- User 10 : I want to save and update my payment details.
+- User 11 : I want to be able to leave a review of the watch I purchased.
+- User 12 : I want to be able to update or remove items from my shopping cart.
+- User 13 : I want to receive an email confirmation about my purchase.
 
 ### The Site owner Goals
 <a name="usergoals"/>
@@ -148,7 +147,9 @@ Main colour is #b7a90c which has a touch of golden shades and the black colour w
 ## Features Left to Implement
 <a name="leftfeatures"/>
 
-
+- Implementing a modal popup window for confirmation before deleting items and logging out.Unable to complete due to a close deadline.
+- Implementing Google,Facebook or possibly more applications OAuth.
+- Adding Contact us page and more content.Unable to complete due to a close deadline.
 
 ## Database Design
 <a name="dbdesign"/>
@@ -212,14 +213,12 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 <a name="wireframe"/>
 
 To see Project Wireframes please click the link: 
-<a href="#">Wireframes</a>
+<a href="https://github.com/kuzGo/kuzco/tree/main/Docs/wireframes">Wireframes</a>
 
 ## Testing :
 <a name="testing"/>
 
 - Testing file can be found here [TESTING.md](https://github.com/kuzGo/kuzco/blob/main/TESTING.md) 
-
-
 
 
 ## Deployment
@@ -265,17 +264,19 @@ In order to successfully  run the app on Heroku,there are a few applications and
 4. Create a unique app name using hyphens instead of spaces.
 5. Choose a region closest to you. I selected my region Europe.
 6. Click Create App button.
-7. In the Deploy section, as Deployment method select GitHub,this option will automatically deploy from GutHub repository.
-8. In the Connect to GitHub section ensure that your GitHub profile is displayed.
-9. Enter repository name and click Search button.
-10. Once repository is found click Connect button.
-11. Navigate to settings and click Reveal Config Vars.
-12. Enter variables from `env.py` file :AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,STRIPE_SECRET_KEY,STRIPE_WH_SECRET, SECRET_KEY. This is required step since Heroku will not be able to find these secured in `gitignore` folder.
+7. Navigate tp Resorces tab and search and select Postgres database.Be sure to use Free plan.
+8. In the Deploy section, as Deployment method select GitHub,this option will automatically deploy from GutHub repository.
+9. In the Connect to GitHub section ensure that your GitHub profile is displayed.
+10. Enter repository name and click Search button.
+11. Once repository is found click Connect button.
+12. Navigate to settings and click Reveal Config Vars.
+13. Enter variables from `env.py` file :AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,STRIPE_SECRET_KEY,STRIPE_WH_SECRET, SECRET_KEY. This is required step since Heroku will not be able to find these secured in `gitignore` folder.
 
-<p><img src="Docs/confvars.PNG" style="min-width:30%" height="100" alt="Heroku App snip"></p>
+<p><img src="Docs/confvars.PNG" style="min-width:60%" height="300" alt="Heroku App snip"></p>
 
-13. Prior to enabling automatic deployment, make sure that requirements.txt and Procfile are pushed (`git push`)to GitHub.
-14. Click Deploy Branch button.
+14. Prior to enabling automatic deployment, make sure that requirements.txt and Procfile are pushed (`git push`)to GitHub.
+15. Click Deploy Branch button.
+
 
 
 ## Credits :

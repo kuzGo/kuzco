@@ -4,34 +4,25 @@
 
 At various stages of the project development I have been using extensive testing of the website.Main tools used to test the website are Google Dev Tools,Firefox Dev Tools . To validate the code  I have been using W3C Markup Validator, W3C CSS Validator - PEP8 Online to ensure proper indentation and full PEP8 compliance. During development The [Built-In Django's Debugger](https://docs.djangoproject.com/en/4.0/ref/settings/) was set to `True` so the code has been refactored on multiple occasions should any errors occurred.
 
+- Issue : One of the major issues occured after deploying my project, static files no longer work on localhost.
+- Steps I took to resolve: I tried setting DEBUG=True, DEVELOPMNET= True, commented out postgres DB and and added : `STATIC_ROOT = os.path.join(BASE_DIR, 'static')`, ran ``collectstatic`` , however, css and JS are not working locally. 
+  * Posted the issue on Slack channel #project-milestone-4 for assistance.
+  * Contacted the Code Istitute Tutor support (Tutor Jo)
+- Solution : Uncomment the database, revert evrything back to the original code and checked for typos in `DEVELOPMNET= True`
 
-<details>
+- Issue : During developing `update_reviews` in my ``Reviews`` class I have been constantly receiving an ``error 404``.
+- Steps I took to resolve: Refactoring the code and tried to chnage the `{% url %}` hovewer, after contacting Tutor support, with the assistance of Tutor Igor, we 
+finally solved the issue.
+- Solution : Moving the `{% url %}` to the `reviews.html` and unindent the `return` code to render properly.
 
-<br>
-text here
-</details>
-
-
-
-### Image of rendered page:
-
-<details>
-<br>
- <p><img src="static/docs/scrshot 2.PNG" style="min-width:80%" height="400" alt="HTML Temlpate"></p>
-</details>
-
-### Image of HTML Template:
-
-<details>
-<br>
-  <p><img src="static/docs/html.scrshot.PNG" style="min-width:60%" height="600" alt="HTML Temlpate"></p>
-</details>
+- Issue: During long hours of coding I ran into a bug while developing `checkout` models. 
+- Steps I took to resolve: Refactoring the code. posted the issue #project-milestone-4 for assistance. Contacted the Code Istitute Tutor support (Tutor Sean)
+- Solution:Sean spotted typo in `OrderLineItem` class and also the issue that I accidentally entered the code there insted in `Order` class. After refactoring the code the issue has been resolved.
 
 
-<details>
-<br>
- <p><img src="" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
-</details>
+
+
+
 
 <details>
 <br>
@@ -70,7 +61,7 @@ text here
 - Results of Python PEP8 code validation:
 <details>
 <br>
- <p><img src="static/docs/pep8.PNG" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
+ <p><img src="Docs/result_20211214_152318.txt" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
 </details>
 
 ### Lighthouse reports of deployed website:
@@ -86,217 +77,105 @@ Lighthouse desktop report:
 
 <details>
 <br>
- <p><img src="static/docs/lighthse-desktop.PNG" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
+ <p><img src="Docs/lighthse-desktop.PNG" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
 </details>
 
 ### User stories testing :
 
-- User 1 : As a user I want to 
+- User 1 :  As a user I want to view all available watches and their ratings and prices.
 <details>
 <br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/all-watches.PNG" style="min-width:60%" height="400" alt="All watches"></p>
 </details>
 
-<details>
-<br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
-</details>
 
-- User 2 : As a user I want to 
+- User 2 : As a user I want to search for specific watches using type, description or     
+other keywords.
 
 
 <details>
 <br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/search.gif" style="min-width:60%" height="400" alt="Search"></p>
 </details>
+
+- User 3 : As a user I want to view individually each watch's details and description.
 
 <details>
 <br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/description.PNG" style="min-width:60%" height="400" alt="Watch description"></p>
 </details>
+
+- User 4 : When purchasing, I want to know the price I spent while browsing the site.
 
 <details>
 <br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/cart.gif" style="min-width:60%" height="400" alt="cart"></p>
 </details>
 
-- User 3 : As a user I want to be able to
+- User 5 : As a regular user I want to be able to register easily.
 <details>
 <br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/register.gif" style="min-width:60%" height="400" alt="register"></p>
 </details>
+
+- User 6 : I want to be notified by email when registered.
 
 <details>
 <br>
-<p><img src="Docs/.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/email.gif" style="min-width:60%" height="400" alt="email"></p>
 </details>
 
-- User 4 : As a user I want to be able to 
+- User 7 : I want to have my own profile on the website.
+
  <details>
 <br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/profile.PNG" style="min-width:60%" height="400" alt="Profile"></p>
 </details>
+
+- User 8 : I want to make a secure payment.
 
 <details>
 <br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/payment.gif" style="min-width:60%" height="400" alt="Activities"></p>
 </details>
+
+- User 9 : I want to save and update my payment details.
 
 <details>
 <br>
-<p><img src="" style="min-width:60%" height="200" alt="Activities"></p>
+<p><img src="Docs/profile.gif" style="min-width:60%" height="200" alt="Activities"></p>
 </details>
 
-- User 5 : As a user I want to have convenient access 
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>
-
-- User 6 : As a user I want to be able to register as a regular user.
-      - I was able to easily navigate to convenient registration page and to register as a user.
+- User 10 : I want to be able to leave a review of the watch I purchased.
 
 <details>
 <br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/review.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+</details>
+
+- User 11 : I want to be able to update or remove items from my shopping cart.
+
+<details>
+<br>
+<p><img src="Docs/update.gif" style="min-width:60%" height="400" alt="Activities"></p>
 </details> 
 
-- User 7 : As a user I want to be able to login to my account as a registered user.
-    - I was able to create a strong password and to login into Groapps securely every time after registration.
+- User 12 : I want to receive an email confirmation about my purchase.
 
 <details>
 <br>
-<p><img src="static/docs/login.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/email_conf.PNG" style="min-width:60%" height="400" alt="Activities"></p>
 </details>   
-
-
-### Functionality testing :
-
-As part of functionality testing the developer tested every part of the website to ensure that everything is working properly on different types of devices and screen sizes. Browsers that the website has been tested on are as follows:Google Chrome, Firefox, Microsoft Edge.Testing of the website was conducted on numerous devices that I and my close relatives and friends own,these are as follows : Samsung S21, Samsung S20,Samsung A52.Desktop screen sizes all report no issues.
-
-#### Navigation bar:
-1. When the company logo is clicked it will bring the user to the home/landing page regardless of what page the user visits.
-2. The Home button will change the text color to red when hovered over. When clicked it will bring the user to the homepage. 
-3. The Login button is styled slightly differently than the other two buttons to emphasise it's functionality.When hovered over it'll change the text and background color, when clicked it'll bring the user to the Login page.
-4. The Register button is styled slightly differently than the other two buttons to emphasise it's functionality and bring the user's attention and click register. When hovered over it will change the background and text color and when clicked it will bring the user to the register page.
-
-#### Homepage:
-1. Image sliders, is a full width of the screen with indicator showing which item is displayed.Each photo consists of text content describing the purpose of the website.
-- Three card panels with the image and informative text content , inviting users to register.
-When the plus button is clicked there are two possible outcomes:
-
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>   
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-#### Register page:
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-- If the user already has a registered account, they can click the link below, which will lead to the login page.
-
-#### Activities page:
-
-
-1. Search bar
-    - Search button
-
-    <details>
-    <br>
-    <p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-    </details> 
-
-   
-
-    <details>
-    <br>
-    <p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-    </details> 
-
-    
-
-    <details>
-    <br>
-    <p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-    </details> 
-
-
-    
-    <details>
-    <br>
-    <p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-    </details> 
-   
-
-
-
-    <details>
-    <br>
-    <p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-    </details> 
-
-
-#### Admin page:
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>  
-
-
-<details>
-<br>
-<p><img src="" style="min-width:60%" height="400" alt="Activities"></p>
-</details>
-
-
 
 
 #### Known Issues:
+
+My main focus while working on this project was developing functionalities, this had an effect on the website's UI. Due to the close deadline I had to 
+compromise some features. 
+
+- Site footer currently has `position:relative` this makes it jump to the middle of the page if the page lacks the content, such as empty shopping cart.
+- Shopping cart content is pushing the whole page to the left, this is to be further developed.
+- Landing page lacks content, this is to be further developed.
+
 
 [:arrow_up:](#totop)
