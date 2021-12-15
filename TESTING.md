@@ -20,15 +20,6 @@ finally solved the issue.
 - Solution:Sean spotted typo in `OrderLineItem` class and also the issue that I accidentally entered the code there insted in `Order` class. After refactoring the code the issue has been resolved.
 
 
-
-
-
-
-<details>
-<br>
- <p><img src="" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
-</details>
-
 ## Code Validation
 
 - Results of CSS code validation:

@@ -156,6 +156,10 @@ Main colour is #b7a90c which has a touch of golden shades and the black colour w
 
 ### Database Schema
 
+<details>
+<br>
+ <p><img src="Docs/dbs.PNG" style="min-width:90%" height="500" alt="Color scheme"></p>
+</details>
 
 
 ## Project Requirements
