@@ -142,6 +142,31 @@
 
         {% block content %}{% endblock %}
 
+         <!-- Newsletter  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-3 col-xl-3 col-lg-4">
+                <div class="subscribe">
+                    <h3>Subscribe Newsletter</h3>
+                    <p>Subscribe newsletter to get 5% on all products.</p>
+                </div>
+            </div>
+            <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9">
+                <div class="subscribe">
+                    <form id="form">
+                        <label for="from_email"></label>
+                        <input type="text" placeholder="Enter your email" class="subscribe-form" name="from_email"
+                            id="from_email">
+                        <input type="submit" id="button" class="subscribe-btn" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END of Newsletter  -->
+
+<!-- Footer -->
         <footer id="footer" class="container-fluid">
             {% include 'includes/footer.html' %}
         </footer>
@@ -150,6 +175,48 @@
         <script type="text/javascript">
             $('.toast').toast('show');
         </script>
+
+        <!-- EmailsJS Required Javascript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('user_AKMpib1d7UzETb4pKjz1O')
+    </script>
+
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'service_lym8jev';
+                const templateID = 'template_xtu3dol';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Subscribe';
+                        swal({
+                            title: "Subscribed!",
+                            text: "Thank you for subscrition!",
+                            icon: "success",
+                            button: "Cool,thanks!",
+                        });
+                        form.reset();
+                    }, (err) => {
+                        btn.value = 'Subscribe';
+                        console.log(JSON.stringify(err));
+                        swal("Apologies!", "Something went wrong!", "error");
+                    });
+            });
+    </script>
+
+    <!-- Sweet ALerts :https://sweetalert.js.org/guides/  -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
         {% endblock %}
 
     </body>

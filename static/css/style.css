@@ -7,6 +7,8 @@
 }
 body {
     font-family: 'Lato', sans-serif;
+    color: #b9b69f;
+    background-color: #1d1e26;
 }
 html {
     height: 100%;
@@ -36,14 +38,13 @@ html {
 
 .navbar {
     padding: 0 0.8000000000000007rem !important;
-    max-height: 20px;
     background-color: rgba(6, 6, 6, 0.7);
 }
 #topnav {
     background-color: rgba(6, 6, 6, 0.7);
 }
 .hero-wrapper {
-    position: absolute;
+    position: relative;
     right: 0;
     width: 100%;
     min-height: 100vh;
@@ -374,6 +375,7 @@ button {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+/* Footer styling */
 #footer{
     background-color:#b7a90c;
     position: relative;
@@ -385,4 +387,42 @@ button {
 }
 .paginatior{
     margin-top: 26px;
+}
+.service-icon {
+    margin-bottom: 26px;
+    font-size: 40px;
+}
+.delivery-area {
+    padding-top: 65px;
+    padding-bottom: 0;
+}
+/* Newslwtter styling */
+
+.subscribe-btn{
+    width: 35%;
+    height: 60px;
+    border: 0;
+    background: #b6a90c;
+    border-radius: 0;
+    padding: 13px 24px;
+    color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+.subscribe{
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+}
+.subscribe-form {
+    width: 61%;
+    height: 60px;
+    border: 0;
+    color: white;
+    background: aliceblue;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 0;
+    padding: 17px 13px;
+    font-size: 16px;
 }

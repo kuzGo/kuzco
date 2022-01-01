@@ -47,7 +47,7 @@ other keywords.
 ### The Site owner Goals
 <a name="usergoals"/>
 
-- Owner 1 : As a site owner I want to I want to have admin rights.
+- Owner 1 : As a site owner I want to have admin rights.
 - Owner 2: As a site owner I want to be able to add and remove products.
 - Owner 3 : As a site owner I want to be able to update products.
 
@@ -74,7 +74,7 @@ other keywords.
 - Register page
 - Error 404 page
     * Will appear in case of when the server can't find the requested resource.
-- Error 4043 page
+- Error 403 page
     * Will appear in case of Forbidden response status.
 - Error 500 page
     * Will appear in case if the server encountered an unexpected condition.

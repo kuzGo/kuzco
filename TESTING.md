@@ -8,7 +8,7 @@ At various stages of the project development I have been using extensive testing
 - Steps I took to resolve: I tried setting DEBUG=True, DEVELOPMNET= True, commented out postgres DB and and added : `STATIC_ROOT = os.path.join(BASE_DIR, 'static')`, ran ``collectstatic`` , however, css and JS are not working locally. 
   * Posted the issue on Slack channel #project-milestone-4 for assistance.
   * Contacted the Code Istitute Tutor support (Tutor Jo)
-- Solution : Uncomment the database, revert evrything back to the original code and checked for typos in `DEVELOPMNET= True`
+- Solution : Uncomment the database, revert everything back to the original code and checked for typos in `DEVELOPMNET= True`
 
 - Issue : During developing `update_reviews` in my ``Reviews`` class I have been constantly receiving an ``error 404``.
 - Steps I took to resolve: Refactoring the code and tried to chnage the `{% url %}` hovewer, after contacting Tutor support, with the assistance of Tutor Igor, we 
@@ -49,11 +49,8 @@ finally solved the issue.
   <a href="Docs/Nu Html Checker Kuzco.pdf" target="_blank" >Link to HTML Validation PDF Document</a>
 
 
-- Results of Python PEP8 code validation:
-<details>
-<br>
- <p><img src="Docs/result_20211214_152318.txt" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
-</details>
+- Results of Python PEP8 code validation can be found in Gihub repo forlder named "Docs".
+
 
 ### Lighthouse reports of deployed website:
 
