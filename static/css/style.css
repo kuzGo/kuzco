@@ -168,7 +168,7 @@ html {
 .shop-now:active {
     letter-spacing: 1px;
     text-decoration: none;
-    color: #b6a90c;
+    color: #1d1e26;
 }
 .logo-font {
     margin-top: 3rem;
@@ -219,26 +219,11 @@ html {
     }
 
     .navbar-nav {
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -ms-flex-direction: column;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-                flex-direction: row;
+        display: block;
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
-        -ms-flex-line-pack: stretch;
-            align-content: stretch;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-                align-items: stretch;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        
     }
     .img-fluid {
         height: 58vw!important;
@@ -252,6 +237,11 @@ html {
     }
     .table td, .table th {
         padding: 2.7px 2px !important
+    }
+    .badge {
+        position: relative;
+        top: -12px;
+        right: 10px;
     }
 }
 /* Boutique Ado styling  */

@@ -80,12 +80,12 @@
                                     <small class="ml-3">
                                         <a href="{% url 'update_watches' watch.id %}"><i class="far fa-edit"></i> Update|</a>
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="text-danger" data-toggle="modal" data-target="#{{watch.id}}" data-id="{{watch.id}}">
+                                        <button type="button" class="text-danger" data-toggle="modal" data-target="#modal{{watch.id}}" data-id="{{watch.id}}">
                                             <i class="far fa-trash-alt"></i> Delete
                                         </button>
                                     </small>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="{{watch.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                    <div class="modal fade" id="modal{{watch.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                         aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
