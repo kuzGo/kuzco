@@ -82,6 +82,7 @@ html {
 }
 
 .page-link {
+    margin-top: 60px;
     background: black!important;
     color: #b6a90c!important;
 }
@@ -389,6 +390,7 @@ button {
 .service-icon {
     margin-bottom: 26px;
     font-size: 40px;
+    color: #1d1e26;
 }
 .delivery-area {
     padding-top: 65px;

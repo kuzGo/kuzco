@@ -104,3 +104,48 @@ def add_watch(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def update_watches(request, product_id):
+    """ Updates existing watch """
+    if not request.user.is_superuser:
+        messages.error(request,  "Sorry, you do not have permission\
+             to perform these actions.")
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully updated product.")
+            return redirect(reverse('watch_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, "Failed to update this product. \
+                    Please ensure the form is valid.")
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'watches/update_watches.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def remove_watches(request, product_id):
+    """Delete a watch/product from the store"""
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse('home'))
+
+    watches = get_object_or_404(Product, pk=product_id)
+    watches.delete()
+    messages.success(request, f'{watches.name} has been succeffuly deleted.')
+    return redirect(reverse('watches'))
