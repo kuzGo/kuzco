@@ -157,11 +157,24 @@ html {
     background-color:#b7a90c;
     color: #1d1e26;
 }
+.shop-now {
+    color: #1d1e26;
+    text-decoration: none;
+    background-color: #b7a90c;
+    font-size: 1.9rem;
+}
+.shop-now:hover,
+.shop-now:focus,
+.shop-now:active {
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #b6a90c;
+}
 .logo-font {
     margin-top: 3rem;
 }
 .title-top {
-    margin-top: 7rem;
+    margin-top: 13rem;
 }
 .update-link,
 .remove-item {
@@ -452,7 +465,8 @@ button {
     opacity: 0;
     background: #b7a90c;
 }
-.card-menu :hover {
+.card-menu:hover,
+.card-overlay:hover {
     opacity: 1;
 }
 
