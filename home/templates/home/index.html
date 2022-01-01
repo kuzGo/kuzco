@@ -20,5 +20,40 @@
     <a href="{% url 'watches' %}">Explore our Collection</a>
   </div>
 </div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="card-deck wow animate__fadeInUp">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'favicon/card_men.jpg' %}" alt="Card image cap">
+            <div class="card-overlay"></div>
+            <div class="card-menu">
+              <h5 class="card-title">Men's Watches</h5>
+              <a href="{% url 'watches' %}" class="card-text">Shop Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{% static 'favicon/favicon.png' %}" alt="Card image cap">
+            <div class="card-overlay"></div>
+            <div class="card-menu">
+              <h5 class="card-title">Women's Watches</h5>
+              <a href="{% url 'watches' %}" class="card-text">Shop Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="{% static 'favicon/favicon.png' %}" alt="Card image cap">
+            <div class="card-overlay"></div>
+            <div class="card-menu">
+              <h5 class="card-title">Gift Cards</h5>
+              <a href="{% url 'watches' %}" class="card-text">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}

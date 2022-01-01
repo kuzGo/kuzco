@@ -91,7 +91,8 @@
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'shopping_cart' %}">
                                 <div class="text-center">
                                     <div>
-                                        <i class="fas fa-shopping-cart fa-lg"></i>
+                                        <i class="fas fa-shopping-cart fa-lg">
+                                            <span class="badge">{{ product_count }}</span></i>
                                     </div>
                                     <p class="my-0">
                                         {% if grand_total %}
