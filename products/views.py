@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models.functions import Lower
 
 from .models import Product, Category
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -73,3 +75,32 @@ def watch_details(request, product_id):
     }
 
     return render(request, 'watches/watches_description.html', context)
+
+
+@login_required
+def add_watch(request):
+    """ Add watches to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, you do not have permission\
+             to perform these actions.")
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(
+                request, "Successfully added a watch to the store")
+            return redirect(reverse('watch_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, "Failed to add a watch.\
+                    Please ensure the form is valid")
+    else:
+        form = ProductForm()
+    template = 'watches/add_watches.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
