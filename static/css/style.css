@@ -35,7 +35,9 @@ html {
     width: -moz-fit-content;
     width: fit-content;
 }
-
+.dropdown-menu {
+    background-color: #b7a90c;
+}
 .navbar {
     padding: 0 0.8000000000000007rem !important;
     background-color: #1d1e26;
@@ -87,8 +89,17 @@ html {
     color: #b6a90c!important;
 }
 .hero-text {
-    position: relative;
     z-index: 10;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    bottom: 50%;
+    left: 50%;
+    letter-spacing: 6px;
+    font-weight: 600;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .hero-text h3 {
@@ -104,7 +115,6 @@ html {
 
 .hero-text a {
     position: absolute;
-    top: 112%;
     left: 36%;
     display: inline-block;
     font-size: 1em;
@@ -197,7 +207,10 @@ html {
 
 /* Smartphones portrait and landscape orientation  */
 @media only screen and (min-width: 320px) and (max-width: 823px) {
-
+     
+    .hero-text {
+        top: 13% !important;
+    }
     .hero-text h3 {
         font-size: 2.3em;
         font-weight: 700;
@@ -239,9 +252,9 @@ html {
         padding: 2.7px 2px !important
     }
     .badge {
-        position: relative;
-        top: -12px;
-        right: 10px;
+        position: relative!important;
+        top: -12px!important;
+        right: 10px!important;
     }
 }
 /* Boutique Ado styling  */

@@ -15,15 +15,18 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 {% if watch_detail.image %}
+                <a href="{% url 'watches' %}" class="btn btn-outline-secondary btn-small text-uppercase rounded-0 mt-5">
+                    <span> &#8592; Back Shopping</span>
+                </a>
                     <a href="">
-                        <img class="card-img-top img-detail" src="{{ watch_detail.image.url }}" alt="{{ watch_detail.name }}"></a>
+                        <img class="card-img-top animate__animated animate__backInDown img-detail" src="{{ watch_detail.image.url }}" alt="{{ watch_detail.name }}"></a>
                     {% else %}
                         <a href="">
                             <img class="card-img-top img-detail" src="{{ MEDIA_URL }}noimage.png" alt="{{ watch_detail.name }}"></a>
                         {% endif %}
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="product-details-container mb-5 mt-md-5">
+                        <div class="product-details-container animate__animated animate__fadeInRightBig animate__delay-1s mb-5 mt-md-5">
                             <p class="mb-0">{{ watch_detail.name}}</p>
                             <p class="lead mb-0 text-left font-weight-bold">&#8364;{{ watch_detail.price }}</p>
                             {% if watch_detail.rating %}
@@ -97,14 +100,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <a href="{% url 'watches' %}" class="btn btn-outline-secondary text-uppercase rounded-0 mt-5">
-                                            <span class="icon">
-                                                <i class="fas fa-chevron"></i>
-                                            </span>
-                                            <span>Continue Exploring</span>
-                                        </a>
-                                        
+                                    <div class="col-12">                               
                                         <input type="submit" class="btn btn-outline-warning text-uppercase rounded-0 mt-5" value="Add to Cart">
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
