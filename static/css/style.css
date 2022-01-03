@@ -167,9 +167,12 @@ html {
     background-color:#b7a90c;
     color: #1d1e26;
 }
+.bg-black {
+    background-color:#b7a90c;
+}
 .shop-now {
     color: #1d1e26;
-    text-decoration: none;
+    text-decoration: underline;
     background-color: #b7a90c;
     font-size: 1.9rem;
 }
@@ -245,7 +248,7 @@ html {
         padding: 10px;
     }
     .title-top {
-        margin-top: 13rem;
+        margin-top: -2rem;
         font-size: 26px;
     }
     .table td, .table th {
@@ -283,13 +286,74 @@ html {
 }
 /* END OF Boutique Ado styling  */
 
+/* Custom buttons styling */
+.cust-button {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px;
+    outline: 0;
+    border: 1px solid #b7a90c;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    color: #b7a90c;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.cust-button:after {
+    content: "";
+    background-color: #1d1e26;
+    border: 1px solid #b7a90c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+.cust-button-gold {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px;
+    outline: 0;
+    border: 1px solid #1d1e26;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    color: #1d1e26;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.cust-button-gold:after {
+    content: "";
+    background-color: #b7a90c;
+    border: 1px solid #1d1e26;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+.cust-button:hover:after,
+.cust-button-gold:hover:after {
+    top: 0;
+    left: 0;
+}
 /* search bar animation */
 button {
     background:transparent;
     border: none;
 }
 .search-container{
-    background: #fff;
+    background: #45777a;
     height: 50px;
     border-radius: 30px;
     padding: 10px 20px;
@@ -451,28 +515,23 @@ button {
     margin-bottom: 0;
     transition: .5s ease;
     opacity: 0;
-    background-color: #b7a90c;
+    background-color: #b7a90c59;
     position: absolute;
-    top: 50%;
+    top: 87%;
     left: 50%;
+    width: 100%;
+    height: 8vw;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
     }
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: #b7a90c;
-}
-.card-menu:hover,
-.card-overlay:hover {
+
+.card-menu:hover {
     opacity: 1;
 }
-
+.card {
+    background-color: transparent!important;
+}
 .badge {
     position: absolute;
     top: -5px;

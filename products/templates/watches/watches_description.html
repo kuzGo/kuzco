@@ -45,28 +45,7 @@
                                         <i class="far fa-trash-alt"></i> Delete
                                     </button>
                                 </small>
-                                <!-- Modal -->
-                                <div class="modal fade" id="delete_watch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Confirm you want to remove this item?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="text-warning" data-dismiss="modal"><i class="far fa-window-close"></i>
-                                                    Cancel|</button>
-                                                <a href="{% url 'remove_watches' watch_detail.id %}" class="text-danger"> <i class="far fa-trash-alt"></i> Delete</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                              
                                 {% endif %}
                             <p class="mt-3">{{ watch_detail.description }}</p>
                             <form action="{% url 'add_to_cart' watch_detail.id %}" method="POST" class="form">
@@ -101,11 +80,11 @@
                                         </div>
                                     </div>
                                     <div class="col-12">                               
-                                        <input type="submit" class="btn btn-outline-warning text-uppercase rounded-0 mt-5" value="Add to Cart">
+                                        <input type="submit" class="cust-button text-uppercase rounded-0 mt-5" value="Add to Cart">
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </div>
-                                <a href="{% url 'add_reviews' %}" class="btn btn-outline-success text-uppercase rounded-0 mt-5">
+                                <a href="{% url 'add_reviews' %}" class="cust-button-gold text-uppercase rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron"></i>
                                     </span>
@@ -118,6 +97,28 @@
                 </div>
             </div>
 
+              <!-- Modal -->
+              <div class="modal fade" id="delete_watch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          Confirm you want to remove this item?
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="text-warning" data-dismiss="modal"><i class="far fa-window-close"></i>
+                              Cancel|</button>
+                          <a href="{% url 'remove_watches' watch_detail.id %}" class="text-danger"> <i class="far fa-trash-alt"></i> Delete</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
         {% endblock %}
 
         {% block postload_js %}
