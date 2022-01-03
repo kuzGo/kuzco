@@ -293,6 +293,7 @@ html {
     letter-spacing: 1px;
     padding: 13px 20px;
     outline: 0;
+    text-decoration: none;
     border: 1px solid #b7a90c;
     cursor: pointer;
     position: relative;
@@ -321,7 +322,8 @@ html {
     letter-spacing: 1px;
     padding: 13px 20px;
     outline: 0;
-    border: 1px solid #1d1e26;
+    text-decoration: none;
+    border: 1px solid #fbe64c;
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
@@ -333,7 +335,7 @@ html {
 .cust-button-gold:after {
     content: "";
     background-color: #b7a90c;
-    border: 1px solid #1d1e26;
+    border: 1px solid #fbe64c;
     width: 100%;
     z-index: -1;
     position: absolute;
@@ -342,7 +344,10 @@ html {
     left: 7px;
     transition: 0.2s;
 }
-.cust-button:hover:after,
+.cust-button:hover:after {
+    top: 0;
+    left: 0;
+}
 .cust-button-gold:hover:after {
     top: 0;
     left: 0;
@@ -356,7 +361,7 @@ button {
     background: #45777a;
     height: 50px;
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 10px 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -401,19 +406,8 @@ button {
 .search-container .search-btn .fas{
     color: #5cbdbb;
 }
-
-@-webkit-keyframes hoverShake {
-  0% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
-  25% {-webkit-transform: skew(5deg, 5deg);transform: skew(5deg, 5deg);}
-  75% {-webkit-transform: skew(-5deg, -5deg);transform: skew(-5deg, -5deg);}
-  100% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
-}
-
-@keyframes hoverShake {
-  0% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
-  25% {-webkit-transform: skew(5deg, 5deg);transform: skew(5deg, 5deg);}
-  75% {-webkit-transform: skew(-5deg, -5deg);transform: skew(-5deg, -5deg);}
-  100% {-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);}
+.teble {
+    color: #b9b69f!important;
 }
 
 /* Footer section */

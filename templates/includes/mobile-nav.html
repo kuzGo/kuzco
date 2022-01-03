@@ -36,7 +36,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-                 <a href="{% url 'account_logout' %}" class="dropdown-item">Admin Dashboard</a>
+                 <a href="{% url 'add_watch' %}" class="dropdown-item">Admin Dashboard</a>
             <a href="{% url 'reviews_total' %}" class="dropdown-item">Reviews</a>
             <a href="{% url 'add_reviews' %}" class="dropdown-item">Add Reviews</a>
                {% endif %}

@@ -56,7 +56,6 @@
                                         <p class="mt-3"><strong>Quantity: </strong></p>
                                         <div class="form-group w-50">
                                             <div class="input-group">
-
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn rounded-0" 
                                                         data-item_id="{{ watch_detail.id }}" id="decrement-qty_{{ watch_detail.id }}">
@@ -80,11 +79,11 @@
                                         </div>
                                     </div>
                                     <div class="col-12">                               
-                                        <input type="submit" class="cust-button text-uppercase rounded-0 mt-5" value="Add to Cart">
+                                        <input type="submit" class="btn cust-button text-uppercase rounded-0 mt-5" value="Add to Cart">
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </div>
-                                <a href="{% url 'add_reviews' %}" class="cust-button-gold text-uppercase rounded-0 mt-5">
+                                <a href="{% url 'add_reviews' %}" class="btn cust-button-gold text-uppercase rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron"></i>
                                     </span>
@@ -92,7 +91,9 @@
                                 </a>
                             </form>
                         </div>
-
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'add_favourites' watch_detail.id %}" class="btn btn-danger text-uppercase rounded-0 mt-5">Add to Favourites</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
