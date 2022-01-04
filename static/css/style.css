@@ -233,7 +233,10 @@ html {
         left: 0 !important;
         
     }
-
+    
+    .nav-link{
+        padding: 1.2rem 0.5rem!important;
+    }
     .navbar-nav {
         display: block;
         padding-left: 0;
@@ -386,8 +389,9 @@ button {
 }
 
 .search-container:hover .search-input,
+.search-container:active .search-input,
 .search-container:focus .search-input{
-    width: 400px;
+    width: 24vw;
     
 }
 .search-container .search-input{
@@ -406,7 +410,7 @@ button {
 .search-container .search-btn .fas{
     color: #5cbdbb;
 }
-.teble {
+.table {
     color: #b9b69f!important;
 }
 
@@ -523,7 +527,11 @@ button {
 .card-menu:hover {
     opacity: 1;
 }
-.card {
+.card{
+    background-color: transparent!important;
+    border: 1px solid #b7a90c42!important;
+}
+.card-body {
     background-color: transparent!important;
 }
 .badge {

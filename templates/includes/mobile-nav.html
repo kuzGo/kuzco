@@ -29,25 +29,47 @@
         <a class="nav-link d-lg-none " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                   <div><i class="fas fa-user fa-lg"></i></div>
+                <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0 d-none d-md-block">My Account</p>
             </div>
         </a>
+        
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% if request.user.is_authenticated %}
-              {% if request.user.is_superuser %}
-                 <a href="{% url 'add_watch' %}" class="dropdown-item">Admin Dashboard</a>
+            {% if request.user.is_superuser %}
+            <a href="{% url 'add_watch' %}" class="dropdown-item">Admin Dashboard</a>
             <a href="{% url 'reviews_total' %}" class="dropdown-item">Reviews</a>
             <a href="{% url 'add_reviews' %}" class="dropdown-item">Add Reviews</a>
-               {% endif %}
-                 <a href="" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                {% else %}
-                   <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                {% endif %}
+            {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
         </div>
     </li>
+    <!-- Favourites -->
+    <li class="list-inline-item">
+        <a class="text-primary nav-link d-block d-lg-none"
+            href="{% url 'all_favourites' %}">
+            <div class="text-center">
+                <div><i class="far fa-heart fa-lg"></i></div>
+                <p class="my-0 d-none d-md-block">Favourites</p>
+            </div>
+        </a>
+    </li>
+    <!-- Reviews -->
+    <li class="list-inline-item">
+        <a class="text-primary nav-link d-block d-lg-none"
+            href="{% url 'reviews_total' %}">
+            <div class="text-center">
+                <div><i class="far fa-star fa-lg"></i></div>
+                <p class="my-0 d-none d-md-block">Favourites</p>
+            </div>
+        </a>
+    </li>
+    <!-- Shopping Cart -->
     <li class="list-inline-item">
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
             href="{% url 'shopping_cart' %}">

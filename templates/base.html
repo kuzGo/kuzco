@@ -82,14 +82,34 @@
                                     {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                    <a href="{% url 'reviews_total' %}" class="dropdown-item">Reviews</a>
-                                    <a href="{% url 'all_favourites' %}" class="dropdown-item">Favourites</a>
+                                    
                                 {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                                 {% endif %}
                             </div>
                         </li>
+                        <!-- Favourites -->
+                            <li class="list-inline-item list-unstyled text-center text-lg-right my-0">
+                                <a class="text-primary nav-link d-block"
+                                    href="{% url 'all_favourites' %}">
+                                    <div class="text-center">
+                                        <div><i class="far fa-heart fa-lg"></i></div>
+                                        <p class="my-0 d-none d-md-block">Favourites</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- Reviews -->
+                            <li class="list-inline-item list-unstyled text-center text-lg-right my-0">
+                                <a class="text-primary nav-link d-block"
+                                    href="{% url 'reviews_total' %}">
+                                    <div class="text-center">
+                                        <div><i class="far fa-star fa-lg"></i></div>
+                                        <p class="my-0 d-none d-md-block">Reviews</p>
+                                    </div>
+                                </a>
+                            </li>
+                           <!-- Shopping Cart -->
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'shopping_cart' %}">
                                 <div class="text-center">
@@ -107,8 +127,7 @@
                                     </p>                           
                                 </div>
                             </a>
-                           
-                        </li>
+                        </li>                       
                     </ul>
                 </div>
                 {% if messages %}
