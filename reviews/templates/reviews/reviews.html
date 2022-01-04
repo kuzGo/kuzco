@@ -19,9 +19,9 @@
         </div>
     </div>
     {% if reviews %}
-        Number of reviews: {{ reviews|length }}
+    Number of reviews: {{ reviews|length }}
     {% else %}
-        No reviews yet.
+    No reviews yet.
     {% endif %}
     <div class="row">
         <div class="container col-10 offset-1">
@@ -31,9 +31,11 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if review.watches.image %}
-                            <img class="card-img-top img-fluid" src="{{ review.watches.image.url }}" alt="{{ review.watches.name }}">
+                        <img class="card-img-top img-fluid" src="{{ review.watches.image.url }}"
+                            alt="{{ review.watches.name }}">
                         {% else %}
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ review.watches.name }}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                            alt="{{ review.watches.name }}">
                         {% endif %}
                         <div class="col">
                             <p class="lead mb-0 text-left font-weight-bold">
@@ -44,28 +46,30 @@
                                 {{ review.review }}</p>
                         </div>
                         <div class="card-body pb-0">
-                            <p class="mb-0">Review posted: {{ review.created }}</p>  
+                            <p class="mb-0">Review posted: {{ review.created }}</p>
                         </div>
                         <div class="card-body pb-0">
-                            <p class="mb-0">Updated: {{ review.updated}}</p>  
+                            <p class="mb-0">Updated: {{ review.updated}}</p>
                         </div>
-                      
+
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">Reviewed by: {{ review.username }}</p>  
-                                </div>                           
+                                    <p class="mb-0">Reviewed by: {{ review.username }}</p>
+                                </div>
                             </div>
                         </div>
                         {% if request.user.is_authenticated %}
                         <div class="row">
                             <div class="col">
-                            <a href="{% url 'update_reviews' review.id %}" class="btn btn-outline-success rounded-0 ml-5 text-center">Update</a>
+                                <a href="{% url 'update_reviews' review.id %}"
+                                    class="btn btn-outline-success rounded-0 ml-5 text-center">Update</a>
 
-                            <a href="{% url 'remove_review' review.id %}" class="btn btn-outline-danger rounded-0 ml-5 text-center">Remove</a>
+                                <a href="{% url 'remove_review' review.id %}"
+                                    class="btn btn-outline-danger rounded-0 ml-5 text-center">Remove</a>
+                            </div>
                         </div>
-                        </div>
-                        {% endif %}
+                       {% endif %}
                     </div>
                 </div>
                 {% endfor %}
@@ -74,4 +78,3 @@
     </div>
 </div>
 {% endblock %}
-
