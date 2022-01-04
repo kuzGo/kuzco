@@ -13,11 +13,16 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center">
+        <div class="col title-top text-center">
             <h2>Reviews</h2>
             <hr>
         </div>
     </div>
+    {% if reviews %}
+        Number of reviews: {{ reviews|length }}
+    {% else %}
+        No reviews yet.
+    {% endif %}
     <div class="row">
         <div class="container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
@@ -45,20 +50,22 @@
                             <p class="mb-0">Updated: {{ review.updated}}</p>  
                         </div>
                       
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="card-body pb-0">
                                     <p class="mb-0">Reviewed by: {{ review.username }}</p>  
                                 </div>                           
                             </div>
                         </div>
+                        {% if request.user.is_authenticated %}
                         <div class="row">
                             <div class="col">
-                            <a href="{% url 'update_reviews' review.id %}" class="btn btn-outline-success rounded-0 text-center">Update</a>
+                            <a href="{% url 'update_reviews' review.id %}" class="btn btn-outline-success rounded-0 ml-5 text-center">Update</a>
 
-                            <a href="{% url 'remove_review' review.id %}" class="btn btn-outline-danger rounded-0 text-center">Remove</a>
+                            <a href="{% url 'remove_review' review.id %}" class="btn btn-outline-danger rounded-0 ml-5 text-center">Remove</a>
                         </div>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

@@ -1,1 +1,5 @@
+{% if item.watch.image %}
 <img src="{{ item.watch.image.url }}" alt="{{ item.watch.image.name }}" class="img-fluid">
+{% else %}
+<img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.watch.name }}">
+{% endif %}

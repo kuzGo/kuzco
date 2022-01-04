@@ -17,28 +17,62 @@
             <h2 class="title-top">
                 Favourites
             </h2>
+            {% if favourite.watches.all %}
+                 Number of favourites: {{ favourite.watches.all|length }}
+            {% else %}
+                No favourites.
+            {% endif %}
+        </div>
+    </div>
+    {% for item in favourite.watches.all %}
+    <!-- start table -->
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive rounded">
+                <table class="table table-sm-dark table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">SKU</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td class="py-3">
+                            <p class="my-0">
+                                <strong>{{ item.name }}</strong>
+                            </p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">
+                                <strong>{{ item.sku|upper }}</strong>
+                            </p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">&#8364;{{ item.price }}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% if item.image %}
+                            <img src="{{ item.image.url }}" alt="{{ item.image.name }}" class="w-100 img-fluid">
+                            {% else %}
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                            {% endif %}
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
+            {% empty %}
+            <p class="mb-5">Your favourite items list is empty</p>
+            <a href="{% url 'watches' %}" class="btn btn-outline-secondary text-uppercase rounded-0 btn-lg">Continue
+                Exploring</a>
         </div>
     </div>
 </div>
-{% for item in favourite.watches.all %}
-<div class="row">
-    <div class="col-2 mb-1">
-        {% if item.image %}
-        <img src="{{ item.image.url }}" alt="{{ item.image.name }}" class="w-100">
-        {% else %}
-        <img class="card-img-top img-detail" src="{{ MEDIA_URL }}noimage.png" alt="{{ watch.name }}"></a>
-        {% endif %}
-        </a>
-        <div class="col-7">
-            <p class="my-0">
-                <strong>{{ item.name }}</strong>
-            </p>
-            <p class="my-0 small text-muted">Price:{{ item.price }}</p>
-        </div>
-    </div>
-    {% empty %}
-    <h3>Your favourite items list is empty</h3>
-</div>
+<!-- end table -->
 {% endfor %}
 
 {% endblock %}
