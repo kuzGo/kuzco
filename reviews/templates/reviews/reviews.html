@@ -16,13 +16,14 @@
         <div class="col title-top text-center">
             <h2>Reviews</h2>
             <hr>
+            {% if reviews %}
+            Number of reviews: {{ reviews|length }}
+            {% else %}
+            No reviews yet.
+            {% endif %}
         </div>
     </div>
-    {% if reviews %}
-    Number of reviews: {{ reviews|length }}
-    {% else %}
-    No reviews yet.
-    {% endif %}
+    
     <div class="row">
         <div class="container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
