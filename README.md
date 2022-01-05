@@ -158,7 +158,7 @@ Main colour is #b7a90c which has a touch of golden shades and the black colour w
 
 <details>
 <br>
- <p><img src="Docs/dbs.PNG" style="min-width:90%" height="500" alt="Color scheme"></p>
+ <p><img src="Docs/database_schema.png" style="min-width:90%" height="500" alt="Color scheme"></p>
 </details>
 
 
