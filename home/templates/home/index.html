@@ -16,8 +16,8 @@
   </video>
   <div class="vid-overlay"></div>
   <div class="hero-text">
-    <h3> We believe it's always the right time </h3>
-    <a href="{% url 'watches' %}">Explore our Collection</a>
+    <h3 class="animate__animated animate__fadeInUp animate__delay-1s"> We believe it's always the right time </h3>
+    <a class="animate__animated animate__fadeInDownBig animate__delay-1s" href="{% url 'watches' %}">Explore our Collection</a>
   </div>
 </div>
 <div class="section subscribe">
@@ -29,21 +29,21 @@
             <img class="card-img-top" src="{% static 'favicon/card_men.jpg' %}" alt="Card image cap">
             <div class="card-menu">
               <h5 class="card-title">Men's Watches</h5>
-              <a href="{% url 'watches' %}" class="card-text ">Shop Now</a>
+              <a href="{% url 'watches' %}" class="card-text cust-button">Shop Now</a>
             </div>
           </div>
           <div class="card animate__animated animate__backInRight animate__delay-1s">
             <img class="card-img-top" src="{% static 'favicon/favicon.png' %}" alt="Card image cap">
             <div class="card-menu">
               <h5 class="card-title">Women's Watches</h5>
-              <a href="{% url 'watches' %}" class="card-text">Shop Now</a>
+              <a href="{% url 'watches' %}" class="card-text cust-button">Shop Now</a>
             </div>
           </div>
           <div class="card animate__animated animate__backInDown animate__delay-1s">
             <img class="card-img-top" src="{% static 'favicon/favicon.png' %}" alt="Card image cap">
             <div class="card-menu">
               <h5 class="card-title">Gift Cards</h5>
-              <a href="{% url 'watches' %}" class="card-text animate__animated animate__fadeInUp">Shop Now</a>
+              <a href="{% url 'watches' %}" class="card-text cust-button">Shop Now</a>
             </div>
           </div>
         </div>

@@ -38,6 +38,10 @@ html {
 .dropdown-menu {
     background-color: #b7a90c;
 }
+.dropdown-item:hover {
+    background-color:#cebf1c!important;;
+}
+
 .navbar {
     padding: 0 0.8000000000000007rem !important;
     background-color: #1d1e26;
@@ -82,7 +86,9 @@ html {
     color: #b6a90c!important;
     text-transform: uppercase;
 }
-
+.nav-link:hover {
+    color: #45777a!important;
+}
 .page-link {
     margin-top: 60px;
     background: black!important;
@@ -163,7 +169,7 @@ html {
     padding-top: 134px;
 }
 #delivery-banner h4 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     background-color:#b7a90c;
     color: #1d1e26;
 }
@@ -225,15 +231,15 @@ html {
 .allauth-form-inner-content input[type='submit']{
     display: inline-block;
     font-weight: 400;
-    color: #fff;
+    color: #222;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border:1px solid #000;
+    background-color: #b7a90c;
+    border:1px solid #b7a90c;
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: 0;
@@ -241,71 +247,14 @@ html {
 }
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {
-    color: #fff;
+    color: #b7a90c;
     background-color: #222;
     border-color: #222;
 }
 .allauth-form-inner-content a {
-    color: #17a2b8;
+    color: #45777a;
 }
-/* END of Boutique Ado styling  */
 
-/* Smartphones portrait and landscape orientation  */
-@media only screen and (min-width: 320px) and (max-width: 823px) {
-     
-    .hero-text {
-        top: 13% !important;
-    }
-    .hero-text h3 {
-        font-size: 2.3em;
-        font-weight: 700;
-        margin-top: 50%;
-    }
-    .logo-font {
-        margin-top: 6rem;
-    }
-    .media-links {
-        font-size: 24px!important;
-    }
-    .media-links li a i {
-        font-size: 24px!important;
-    }
-    .hero-text a {
-        font-size: 0.6em !important;
-        left: 0 !important;
-        
-    }
-    
-    .nav-link{
-        padding: 1.2rem 0.5rem!important;
-    }
-    .navbar-nav {
-        display: block;
-        padding-left: 0;
-        margin-bottom: 0;
-        list-style: none;
-        
-    }
-    .img-fluid {
-        height: 58vw!important;
-    }
-    .mob-nav {
-        padding: 10px;
-    }
-    .title-top {
-        margin-top: -2rem;
-        font-size: 26px;
-    }
-    .table td, .table th {
-        padding: 2.7px 2px !important
-    }
-    .badge {
-        position: relative!important;
-        top: -12px!important;
-        right: 10px!important;
-    }
-}
-/* Boutique Ado styling  */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -330,7 +279,73 @@ html {
     }
 }
 /* END OF Boutique Ado styling  */
-
+/* Smartphones portrait and landscape orientation  */
+@media only screen and (min-width: 320px) and (max-width: 823px) {
+     
+    .hero-text {
+        top: 13% !important;
+    }
+    .hero-text h3 {
+        font-size: 2.3em;
+        font-weight: 700;
+        margin-top: 50%;
+    }
+    .logo-font {
+        margin-top: -1rem;
+    }
+    .media-links {
+        font-size: 24px!important;
+    }
+    .media-links li a i {
+        font-size: 24px!important;
+    }
+    .hero-text a {
+        font-size: 0.6em !important;
+        left: 0 !important;
+        
+    }
+    
+    .nav-link{
+        padding: 1.2rem 0.5rem!important;
+    }
+    .navbar-nav {
+        display: block;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        
+    }
+    .navbar-toggler{
+        color: #45777a;
+    }
+    .img-fluid {
+        height: 58vw!important;
+    }
+    .mob-nav {
+        padding: 10px;
+    }
+    .title-top {
+        margin-top: -2rem;
+        font-size: 26px;
+    }
+    .table td, .table th {
+        padding: 2.7px 2px !important
+    }
+    .badge {
+        position: relative!important;
+        top: -12px!important;
+        right: 10px!important;
+    }
+    .card-menu {
+        height: 30vw!important;
+    }
+    .card-title {
+        margin-bottom: 1.75rem;
+    }
+    .service-icon {
+        font-size: 25px!important;
+    }
+}
 /* Custom buttons styling */
 .cust-button {
     font-size: 16px;
@@ -402,7 +417,7 @@ button {
     background:transparent;
     border: none;
 }
-.search-container{
+.search-container {
     background: #45777a;
     height: 50px;
     padding: 10px 16px;
@@ -416,7 +431,6 @@ button {
         -ms-flex-align: center;
             align-items: center;
     cursor: pointer;
-    width: 24vw;
     -webkit-transition: 0.8s;
     -o-transition: 0.8s;
     transition: 0.8s;
@@ -440,11 +454,16 @@ button {
     -webkit-transition: 0.8s;
     -o-transition: 0.8s;
     transition: 0.8s;
-
 }
 
 .search-container .search-btn .fas{
     color: #5cbdbb;
+}
+.search-container:hover .search-input,
+.search-container:active .search-input,
+.search-container:focus .search-input{
+    width: 24vw;
+
 }
 .table {
     color: #b9b69f!important;
@@ -505,6 +524,9 @@ button {
     margin-bottom: 26px;
     font-size: 40px;
     color: #1d1e26;
+}
+.service-text {
+    color: #1d1e26!important;
 }
 .delivery-area {
     padding-top: 65px;

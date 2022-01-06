@@ -189,6 +189,8 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**heroku-postgresql**](https://www.heroku.com/) Heroku's database.
 - [**Heroku**](https://www.heroku.com/)  used for hosting deployed website.
 - [**AWS S3**](https://aws.amazon.com/s3/?nc2=type_a) used as a storage for static files.
+- [**Sweet Alert**](https://sweetalert.js.org/) used to customise newsletters alerts.
+- [**Animate.css**](https://animate.style/) used to add aminations to the project.
 - [**Google Dev Tools**](https://developer.chrome.com/docs/devtools/) used for developing and testing webpage.
 - [**Firefox Dev Tools**](https://developer.mozilla.org/en-US/docs/Tools) used for developing and testing webpage.
 - [**Balsamiq**](https://balsamiq.com) used for creating a wireframe.
