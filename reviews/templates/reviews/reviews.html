@@ -26,7 +26,22 @@
     
     <div class="row">
         <div class="container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
+            <div class="row mt-1 mb-2">
+                <div class="col-lg-4 offset-lg-8 col-md-10 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="created_asc" {% if current_sorting == 'created_asc' %}selected{% endif %}>Created (low to high)</option>
+                            <option value="created_desc" {% if current_sorting == 'created_desc' %}selected{% endif %}>Created (high to low)</option>
+                            <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Tiltle (A-Z)</option>
+                            <option value="updated_asc" {% if current_sorting == 'updated_asc' %}selected{% endif %}>Updated (A-Z)</option>
+                            <option value="updated_desc" {% if current_sorting == 'updated_asc' %}selected{% endif %}>Updated (Z-A)</option>
+                            <option value="username_asc" {% if current_sorting == 'username_asc' %}selected{% endif %}>Userame (A-Z)</option>
+                            <option value="username_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Userame (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 {% for review in reviews %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -78,4 +93,30 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postload_js %}
+<script>
+    $('#sort-selector').change(function(){
+        var selector = $(this);
+        var currentURL = new URL (window.location);
+
+        var selectedVal = selector.val();
+        if(selectedVal != 'reset'){
+            var sort = selectedVal.split('_')[0];
+            var direction = selectedVal.split('_')[1];
+
+            currentURL.searchParams.set('sort', sort);
+            currentURL.searchParams.set('direction', direction);
+
+            window.location.replace(currentURL)
+        } else {
+            currentURL.searchParams.delete('sort');
+            currentURL.searchParams.delete('direction');
+
+            window.location.replace(currentURL)
+        }
+
+    })
+</script>
 {% endblock %}
