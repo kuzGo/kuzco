@@ -192,8 +192,13 @@ html {
 .logo-font {
     margin-top: 3rem;
 }
-.title-top {
+.title-top,
+.shopping-card {
     margin-top: 13rem;
+}
+.input-group-append .btn,
+.input-group-prepend .btn {
+    color: #b7a90c;
 }
 .update-link,
 .remove-item {
@@ -302,7 +307,9 @@ html {
     .hero-text a {
         font-size: 0.6em !important;
         left: 0 !important;
-        
+    }
+    a.text-primary:hover {
+        color: #45777a!important;
     }
     
     .nav-link{
@@ -344,6 +351,17 @@ html {
     }
     .service-icon {
         font-size: 25px!important;
+    }
+    .subscribe-btn {
+        height: 37px!important;
+        padding: 4px 24px!important;
+    }
+    .subscribe-form {
+        height: 32px!important;
+    }
+    .cust-button-gold,
+    .cust-button {
+        font-size: 10px!important;
     }
 }
 /* Custom buttons styling */
@@ -412,13 +430,16 @@ html {
     top: 0;
     left: 0;
 }
+.custom-select {
+    background-color: #b7a90c;
+}
 /* search bar animation */
 button {
     background:transparent;
     border: none;
 }
 .search-container {
-    background: #45777a;
+    background: #b7a90c;
     height: 50px;
     padding: 10px 16px;
     display: -webkit-box;
