@@ -14,7 +14,7 @@
       </div>
     </div>
     {% if grand_total and not on_profile_page %}
-          <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
+          <p class="logo-font py-1">Your Bag ({{ product_count }})</p>
           <div class="bag-notification-wrapper">
               {% for item in cart_contents %}
                   <div class="row">
@@ -43,7 +43,7 @@
                           Spend <strong>&#8364;{{ free_delivery }}</strong> more to get free next day delivery!
                       </p>
                   {% endif %}
-                  <a href="{% url 'checkout' %}" class="btn btn-block rounded-0">
+                  <a href="{% url 'checkout' %}" class="btn btn-dark rounded-0">
                       <span class="text-uppercase">Go To Secure Checkout</span>
                       <span class="icon">
                           <i class="fas fa-lock"></i>

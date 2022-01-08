@@ -100,7 +100,7 @@
                                             {% else %}
                                                 <label for="id-save-info" class="form-check-label">
                                                     <a href="{% url 'account_signup' %}" class="text-info">Create an account</a>
-                                                    <a href="{% url 'account_login' %}" class="text-info">login</a>
+                                                    <a href="{% url 'account_login' %}" class="text-info">or login</a>
                                                 {% endif %}
                                             </div>
                                         </fieldset>
@@ -114,19 +114,19 @@
                                             <input type="hidden" value="{{ client_secret }}" name="client_secret">
                                         </fieldset>
                                             <div class="submit-button text-right mt-5 mb-2">
-                                                <a href="" class="btn btn-outline-black rounded-0">
+                                                <a href="" class="btn cust-button mr-5 rounded-0">
                                                     <span class="icon">
                                                         <i class="fas fa-chevron-left"></i>
                                                     </span>
                                                     <span class="font-weight-bold">Update Cart</span>
                                                 </a>
-                                                <button id="submit-button" class="btn btn-black rounded-0">
+                                                <button id="submit-button" class="btn cust-button-gold rounded-0">
                                                     <span class="font-weight-bold">Complete Order</span>
                                                     <span class="icon">
                                                         <i class="fas fa-lock"></i>
                                                     </span>
                                                 </button>
-                                                <p class="small text-danger my-0">
+                                                <p class="small text-danger mt-3 my-0">
                                                     <span class="icon">
                                                         <i class="fas fa-exclamation-circle"></i>
                                                     </span>

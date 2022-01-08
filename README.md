@@ -322,6 +322,10 @@ The code snnipets used from this project have been refactored to make them my ow
  [Pixabay](https://www.pexels.com/photo/luxury-clock-wrist-watch-gmt-master-47856/)
  
  [Alex Carollo](https://www.pexels.com/photo/black-citizen-analog-watch-592815/)
+
+ [The 5TH](https://www.pexels.com/photo/woman-wearing-peach-dress-and-black-jacket-s-left-hand-closeup-photography-179909/)
+ 
+ [Sora Shimazaki](https://www.pexels.com/photo/photo-of-mini-pushcart-with-paper-bags-beside-it-5926460/)
  
 ### Text Content:
 Description of the watches have been taken mostly from established/official websites but these descriptions do not match real products.

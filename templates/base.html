@@ -50,6 +50,25 @@
                     <h4 class="logo-font my-1">Free delivery on orders over &#8364;{{ free_delivery_treshold }}! <a class="shop-now" href="{% url 'watches' %}"> Shop Now </a> </h4>
                 </div>
             </div>
+            <!-- Toast Messages -->
+            {% if messages %}
+            <div class="messages-container">
+                {% for message in messages %}
+                {% with message.level as level %}
+                {% if level == 40 %}
+                {% include 'includes/messages/error_message.html' %}
+                {% elif level == 30 %}
+                {% include 'includes/messages/warning_message.html' %}
+                {% elif level == 25 %}
+                {% include 'includes/messages/success_message.html' %}
+                {% else %}
+                {% include 'includes/messages/info_message.html' %}
+                {% endif %}
+                {% endwith %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            <!-- Toast Messages -->
             <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -92,7 +111,7 @@
                         </li>
                         <!-- Favourites -->
                             <li class="list-inline-item list-unstyled text-center text-lg-right my-0">
-                                <a class="text-primary nav-link d-block"
+                                <a class="nav-link d-block"
                                     href="{% url 'all_favourites' %}">
                                     <div class="text-center">
                                         <div><i class="far fa-heart fa-lg"></i></div>
@@ -102,7 +121,7 @@
                             </li>
                             <!-- Reviews -->
                             <li class="list-inline-item list-unstyled text-center text-lg-right my-0">
-                                <a class="text-primary nav-link d-block"
+                                <a class="nav-link d-block"
                                     href="{% url 'reviews_total' %}">
                                     <div class="text-center">
                                         <div><i class="far fa-star fa-lg"></i></div>
@@ -132,23 +151,6 @@
                     </ul>
                 </div>
             </div>
-                {% if messages %}
-                <div class="messages-container">
-                    {% for message in messages %}
-                      {% with message.level as level %}
-                        {% if level == 40 %}
-                             {% include 'includes/messages/error_message.html' %}
-                         {% elif level == 30 %}
-                             {% include 'includes/messages/warning_message.html' %}            
-                         {% elif level == 25 %}
-                            {% include 'includes/messages/success_message.html' %}
-                        {% else %}
-                            {% include 'includes/messages/info_message.html' %}
-                        {% endif %}
-                     {% endwith %}
-                    {% endfor %}
-                </div>
-            {% endif %}
             </div>
             <div class="row">
                 <nav class="navbar navbar-expand-lg w-100">
