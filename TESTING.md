@@ -46,26 +46,33 @@ finally solved the issue.
 - Results of HTML code validation:
       - Document checking completed. No errors to show, warnings are only for `type` unnesesary for javascript.
 
-  <a href="Docs/Nu Html Checker Kuzco.pdf" target="_blank" >Link to HTML Validation PDF Document</a>
+  <a href="Docs/Html_Checker.pdf" target="_blank" >Link to HTML Validation PDF Document</a>
 
 
 - Results of Python PEP8 code validation can be found in Gihub repo forlder named "Docs".
 
+- Please see below of the ``flake8`` warnings mainly in migrations files.
+
+<details>
+<br>
+ <p><img src="Docs/flake8.png" style="min-width:90%" height="500" alt="Color scheme"></p>
+</details>
+
 
 ### Lighthouse reports of deployed website:
 
-Lighthouse mobile report:
+Lighthouse Desktop report:
 
 <details>
 <br>
- <p><img src="Docs/lighthse-mobile.PNG" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
+ <p><a href="Docs/lighthouseMS4.pdf" target="_blank" >Link to Desktop Lighthouse Report</a></p>
 </details>
 
-Lighthouse desktop report:
+Lighthouse Mobile report:
 
 <details>
 <br>
- <p><img src="Docs/lighthse-desktop.PNG" style="min-width:100%" height="800" alt="Mobile screenshot"></p>
+ <p><a href="Docs/lighthouse-mobile-ms4.pdf" target="_blank" >Link to Mobile Devices Lighthouse Report</a></p>
 </details>
 
 ### User stories testing :
@@ -152,18 +159,122 @@ other keywords.
 
 <details>
 <br>
-<p><img src="Docs/email_conf.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+<p><img src="Docs/email_conf.PNG" style="min-width:60%" height="400" alt="email confirmation"></p>
 </details>   
 
 
-#### Known Issues:
+#### Functionality Testing:
 
-My main focus while working on this project was developing functionalities, this had an effect on the website's UI. Due to the close deadline I had to 
-compromise some features. 
+As part of functionality testing the developer tested every part of the website to ensure that everything is working properly on different types of devices and screen sizes. Browsers that the website has been tested on are as follows:Google Chrome, Firefox, Microsoft Edge.Testing of the website was conducted on numerous devices that I and my close relatives and friends own,these are as follows : Samsung S21, Samsung S20,Samsung A52. Laptop Lenovo ThinkPad and Desktop screen sizes all report no issues.
 
-- Site footer currently has `position:relative` this makes it jump to the middle of the page if the page lacks the content, such as empty shopping cart.
-- Shopping cart content is pushing the whole page to the left, this is to be further developed.
-- Landing page lacks content, this is to be further developed.
+#### Navigation bar:
+
+##### Delivery Banner
+1. Containing the Shop Now link, when hovered over letter spacing slighlty increases.
+2. When clicked on the Shop Now link it it will bring the user to the all products page.
+
+##### Search Bar
+
+- The search bar is available on all pages and when hovered over, the seach bar extends slightly. If there is no searching criteria entered by the user,
+ the user will be notified about the same and redirected to all watches page.  
+
+<details>
+<br>
+<p><img src="Docs/search-error.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details> 
+
+##### MY ACCOUNT
+
+- MY ACCOUNT will change the text color to `#45777a` when hovered over. If the user is not logged in,when clicked it will only show two options:
+
+   * Login:
+    - Username or e-mail field
+    - Pasword field
+  * Sign Up:
+    - E-mail field
+    - E-mail field confirmation
+    - Username
+    - Password
+    - Password Confirmation
+    - Back To Login Button
+    - Signup Button
+
+    <details>
+    <br>
+    <p><img src="Docs/signup-pwd.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/signumpwd2.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/signuppwd3.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/emailveryf.png" style="min-width:80%" height="800" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/emconf1.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/emconf2.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/emfonf3.png" style="min-width:60%" height="400" alt="Verification"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/emconf4.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    <details>
+    <br>
+    <p><img src="Docs/emconf5.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+   
+
+
+1. When the company logo is clicked it will bring the user to the home/landing page regardless of what page the user visits.
+2. The Home button will change the text color to `#45777a` when hovered over. When clicked it will bring the user to the homepage.
+3. ALL WATCHES button when clicked will present a nuber of options for the user to select and sort the items:
+      * By Price
+      * By SKU Number
+      * By Rating
+      * By Type
+      * By With the Image
+      * All Watches
+
+
+4. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+      * Chronograph
+      * Sport
+      * Smartwatch
+      * All Watches
+
+5. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+      * Chronograph
+      * Sport
+      * Smartwatch
+      * All Watches
+
+6. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+      * € 20
+      * € 50
+      * € 100
+      * On Sale
+
 
 
 [:arrow_up:](#totop)

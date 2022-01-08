@@ -1,4 +1,12 @@
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -161,7 +169,9 @@ a:hover {
        object-fit: contain;
 }
 .img-detail:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
     -webkit-transition: ease-in-out 0.8s;
     -o-transition: ease-in-out 0.8s;
     transition: ease-in-out 0.8s;
@@ -235,6 +245,18 @@ a:hover {
 .allauth-form-inner-content label:not([for='id_remember']){
     display: none;
 }
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
@@ -254,7 +276,11 @@ a:hover {
     padding: .375rem .75rem;
     font-size: 1rem;
     border-radius: 0;
+    -webkit-transition: color .15s ease-in-out, backrground-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, backrground-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out, backrground-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out ;
     transition: color .15s ease-in-out, backrground-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out ;
+    transition: color .15s ease-in-out, backrground-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {
@@ -382,10 +408,13 @@ a:hover {
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
-    user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     color: #b7a90c;
     -webkit-user-select: none;
-    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
 }
 
 .cust-button:after {
@@ -398,6 +427,8 @@ a:hover {
     height: 100%;
     top: 7px;
     left: 7px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 .cust-button-gold {
@@ -411,10 +442,13 @@ a:hover {
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
-    user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     color: #1d1e26;
     -webkit-user-select: none;
-    touch-action: manipulation;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
 }
 .cust-button-gold:after {
     content: "";
@@ -426,6 +460,8 @@ a:hover {
     height: 100%;
     top: 7px;
     left: 7px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
     transition: 0.2s;
 }
 .cust-button:hover:after {
@@ -585,8 +621,8 @@ button {
     width: 61%;
     height: 60px;
     border: 0;
-    color: white;
-    background: aliceblue;
+    color: #1d1e26;
+    background: #45777a;
     border: 1px solid rgba(255,255,255,.2);
     border-radius: 0;
     padding: 17px 13px;
@@ -595,10 +631,15 @@ button {
 /* Home page card's styling */
 
 .card-menu {
-    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     min-height: 1px;
-    flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+        flex: 1 0 0%;
     margin-bottom: 0;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
     transition: .5s ease;
     opacity: 0;
     background-color:#b7a90cad;
@@ -608,7 +649,8 @@ button {
     left: 50%;
     width: 100%;
     height: 8vw;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
     text-transform: uppercase;

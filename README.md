@@ -138,18 +138,24 @@ other keywords.
     * Ability to verify emails.
 
 ## Color scheme
-Carefully selected color scheme with the idea in mind to create harmonious and aesthetically pleasing website where users would want to remain longer.
-Main colour is #b7a90c which has a touch of golden shades and the black colour which blends together and leaves an expression of elecancy.
+Carefully selected color scheme with the idea in mind to create harmonious and aesthetically pleasing website where users would want to remain longer.
+Main colour is`` #b7a90c`` which has a touch of golden shades and the ``#1d1e26`` colour which blends together and leaves an expression of elecancy.
+`#45777a` has been selected for minor parts of the site such as shopping cart badge background color, links, padinator buttons.
+
+<details>
+<br>
+<p><img src="Docs/Colormind-ms4.PNG" style="min-width:60%" height="400" alt="Activities"></p>
+</details>  
+
 
 - Typography
-     <p><img src="Docs/font.PNG" style="min-width:90%" height="300" alt="Color scheme"></p>
+     <p><img src="Docs/font.PNG" style="min-width:90%" height="300" alt="Font"></p>
 
 ## Features Left to Implement
 <a name="leftfeatures"/>
 
-- Implementing a modal popup window for confirmation before deleting items and logging out.Unable to complete due to a close deadline.
 - Implementing Google,Facebook or possibly more applications OAuth.
-- Adding Contact us page and more content.Unable to complete due to a close deadline.
+- Adding Contact us page.
 
 ## Database Design
 <a name="dbdesign"/>
@@ -158,7 +164,7 @@ Main colour is #b7a90c which has a touch of golden shades and the black colour w
 
 <details>
 <br>
- <p><img src="Docs/database_schema.png" style="min-width:90%" height="500" alt="Color scheme"></p>
+ <p><img src="Docs/database_schema.png" style="min-width:90%" height="500" alt="Database scheme"></p>
 </details>
 
 
@@ -174,6 +180,15 @@ Relational database (MySQL or Postgres),Stripe payments.
 
 HTML, CSS, JavaScript/jQuery, Python+Django
 
+<p align="left"> 
+    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a> 
+    <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/css3.png"/> </a> 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/> </a> 
+    <a href="https://jquery.com/" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/jquery.png"/> </a> 
+    <a href="https://www.python.org" target="_blank"> <img src="https://img.icons8.com/color/48/000000/python.png"/> </a>
+    <a style="padding-right:8px;" href="https://www.djangoproject.com/" target="_blank"> <img src="https://img.icons8.com/ios/50/000000/django.png"/> </a>
+</p>
+
 ## Frameworks and libraries:
 <a name="flibs"/>
 
@@ -181,6 +196,10 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**Django**](https://www.djangoproject.com/) full stack frameworks used for most of the website functionalities.
 - [**jQuery**](https://jquery.com/) used as a JavaScript library and for Materialize components  initialization.
 - [**Bootsrap4**](https://getbootstrap.com/) used as a front-end framework.
+
+
+
+
 
 
 ## Other Technologies used:
@@ -191,7 +210,7 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**AWS S3**](https://aws.amazon.com/s3/?nc2=type_a) used as a storage for static files.
 - [**Sweet Alert**](https://sweetalert.js.org/) used to customise newsletters alerts.
 - [**Animate.css**](https://animate.style/) used to add aminations to the project.
-- [DBDiagram](https://dbdiagram.io/home) Used to create database scheme diagram.
+- [**DBDiagram**](https://dbdiagram.io/home) Used to create database scheme diagram.
 - [**Google Dev Tools**](https://developer.chrome.com/docs/devtools/) used for developing and testing webpage.
 - [**Firefox Dev Tools**](https://developer.mozilla.org/en-US/docs/Tools) used for developing and testing webpage.
 - [**Balsamiq**](https://balsamiq.com) used for creating a wireframe.
@@ -216,8 +235,8 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**Am I Responsive**](http://ami.responsivedesign.is/) used during post deployment testing stage.
 - [**Pixlr**](https://pixlr.com) used to remove background and editing photographs.
 - [**Ezgif**](https://ezgif.com/video-to-gif) used to covert videos to gif format.
-- [Toptal](https://www.toptal.com/designers/htmlarrows/symbols/) used for HTML simbols and arrows.
-- [Colorlib](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
+- [**Toptal**](https://www.toptal.com/designers/htmlarrows/symbols/) used for HTML simbols and arrows.
+- [**Colorlib**](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
 
 <a name="wireframe"/>
 
