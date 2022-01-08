@@ -191,6 +191,7 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**AWS S3**](https://aws.amazon.com/s3/?nc2=type_a) used as a storage for static files.
 - [**Sweet Alert**](https://sweetalert.js.org/) used to customise newsletters alerts.
 - [**Animate.css**](https://animate.style/) used to add aminations to the project.
+- [DBDiagram](https://dbdiagram.io/home) Used to create database scheme diagram.
 - [**Google Dev Tools**](https://developer.chrome.com/docs/devtools/) used for developing and testing webpage.
 - [**Firefox Dev Tools**](https://developer.mozilla.org/en-US/docs/Tools) used for developing and testing webpage.
 - [**Balsamiq**](https://balsamiq.com) used for creating a wireframe.
@@ -215,6 +216,8 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**Am I Responsive**](http://ami.responsivedesign.is/) used during post deployment testing stage.
 - [**Pixlr**](https://pixlr.com) used to remove background and editing photographs.
 - [**Ezgif**](https://ezgif.com/video-to-gif) used to covert videos to gif format.
+- [Toptal](https://www.toptal.com/designers/htmlarrows/symbols/) used for HTML simbols and arrows.
+- [Colorlib](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
 
 <a name="wireframe"/>
 
@@ -295,6 +298,8 @@ The code snnipets used from this project have been refactored to make them my ow
 
 [**Bootsrap4**](https://getbootstrap.com/) some components and some code snnipets have been used from Bootsrap.
 
+[Colorlib](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
+
 ### Photographers :
 
 * Pexels:
@@ -324,7 +329,7 @@ The code snnipets used from this project have been refactored to make them my ow
  [Alex Carollo](https://www.pexels.com/photo/black-citizen-analog-watch-592815/)
 
  [The 5TH](https://www.pexels.com/photo/woman-wearing-peach-dress-and-black-jacket-s-left-hand-closeup-photography-179909/)
- 
+
  [Sora Shimazaki](https://www.pexels.com/photo/photo-of-mini-pushcart-with-paper-bags-beside-it-5926460/)
  
 ### Text Content:

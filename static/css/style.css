@@ -490,7 +490,10 @@ button {
 .search-container:active .search-input,
 .search-container:focus .search-input{
     width: 24vw;
-
+}
+.modal-content {
+    height: 30vh;
+    background-color: #45777a!important;
 }
 .table {
     color: #b9b69f!important;
