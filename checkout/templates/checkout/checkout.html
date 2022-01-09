@@ -24,7 +24,8 @@
                     </h2>
                 </div>
             </div>
-            <div class="container">
+        
+       
                 <div class="row">
                     <div class="col-12 col-lg-6 order-lg-last mb-5">
                         <div class="text_muted">Summary ({{ product_count }})</div>
@@ -35,19 +36,20 @@
                             <div class="col-3 text-right">
                                 <p class="mb1 mt-0 small-text-muted">Subtotal</p>
                             </div>
-
+                        </div>
+                   
                             {% for item in cart_contents %}
                                 <div class="row">
                                     <div class="col-2 mb-1">
-                                        <a href="{% url 'watch_detail' item.item_id %}" alt="{{ watch.name }}" class="w-100">
+                                        <a href="{% url 'watch_detail' item.item_id %}" alt="{{ item.watch.name }}" class="w-100">
                                             {% if item.watch.image %}
                                                 <img src="{{ item.watch.image.url }}" alt="{{ item.watch.image.name }}" class="w-100">
                                                 {% else %}
-                                                    <img class="card-img-top img-detail" src="{{ MEDIA_URL }}noimage.png" alt="{{ watch.name }}"></a>
+                                                    <img class="card-img-top img-detail" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.watch.name }}"></a>
                                                 {% endif %}
                                             </a>
                                         </div>
-                                    </div>
+                                
                                     <div class="col-7">
                                         <p class="my-0">
                                             <strong>{{ item.watch.name }}</strong>
@@ -139,8 +141,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                      
+                       
+                
                 {% endblock %}
 
                 {% block postload_js %}

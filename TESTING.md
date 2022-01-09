@@ -2,22 +2,21 @@
 <a name="totop"/>
 
 
-At various stages of the project development I have been using extensive testing of the website.Main tools used to test the website are Google Dev Tools,Firefox Dev Tools . To validate the code  I have been using W3C Markup Validator, W3C CSS Validator - PEP8 Online to ensure proper indentation and full PEP8 compliance. During development The [Built-In Django's Debugger](https://docs.djangoproject.com/en/4.0/ref/settings/) was set to `True` so the code has been refactored on multiple occasions should any errors occurred.
+At various stages of the project development I have been using extensive testing of the website.Main tools used to test the website are Google Dev Tools,Firefox Dev Tools . To validate the code  I have been using W3C Markup Validator, W3C CSS Validator - PEP8 Online to ensure proper indentation and full PEP8 compliance. During development The [Built-In Django's Debugger](https://docs.djangoproject.com/en/4.0/ref/settings/) was set to `True` so the code has been refactored on multiple occasions should any errors occur.
 
 - Issue : One of the major issues occured after deploying my project, static files no longer work on localhost.
 - Steps I took to resolve: I tried setting DEBUG=True, DEVELOPMNET= True, commented out postgres DB and and added : `STATIC_ROOT = os.path.join(BASE_DIR, 'static')`, ran ``collectstatic`` , however, css and JS are not working locally. 
   * Posted the issue on Slack channel #project-milestone-4 for assistance.
-  * Contacted the Code Istitute Tutor support (Tutor Jo)
+  * Contacted the Code Institute Tutor support (Tutor Jo)
 - Solution : Uncomment the database, revert everything back to the original code and checked for typos in `DEVELOPMNET= True`
 
 - Issue : During developing `update_reviews` in my ``Reviews`` class I have been constantly receiving an ``error 404``.
-- Steps I took to resolve: Refactoring the code and tried to chnage the `{% url %}` hovewer, after contacting Tutor support, with the assistance of Tutor Igor, we 
-finally solved the issue.
-- Solution : Moving the `{% url %}` to the `reviews.html` and unindent the `return` code to render properly.
+- Steps I took to resolve: Refactoring the code and trying to change the ``{% url %}`` however, after contacting Tutor support, with the assistance of Tutor Igor, we finally solved the issue.
+- Solution : Moving the ``{% url %}`` to the reviews.html and unindenting the return code to render properly.
 
 - Issue: During long hours of coding I ran into a bug while developing `checkout` models. 
-- Steps I took to resolve: Refactoring the code. posted the issue #project-milestone-4 for assistance. Contacted the Code Istitute Tutor support (Tutor Sean)
-- Solution:Sean spotted typo in `OrderLineItem` class and also the issue that I accidentally entered the code there insted in `Order` class. After refactoring the code the issue has been resolved.
+- Steps I took to resolve: Refactoring the code. posted the issue #project-milestone-4 for assistance. Contacted the Code Institute Tutor support (Tutor Sean)
+- Solution:Sean spotted a typo in `OrderLineItem` class and also the issue that I accidentally entered the code there instead in `Order` class. After refactoring the code the issue has been resolved.
 
 
 ## Code Validation
@@ -49,7 +48,7 @@ finally solved the issue.
   <a href="Docs/Html_Checker.pdf" target="_blank" >Link to HTML Validation PDF Document</a>
 
 
-- Results of Python PEP8 code validation can be found in Gihub repo forlder named "Docs".
+- Results of Python PEP8 code validation can be found in the Github repo folder named "Docs".
 
 - Please see below of the ``flake8`` warnings mainly in migrations files.
 
@@ -171,7 +170,7 @@ As part of functionality testing the developer tested every part of the website 
 
 1. When the company logo is clicked it will bring the user to the home/landing page regardless of what page the user visits.
 2. The Home button will change the text color to `#45777a` when hovered over. When clicked it will bring the user to the homepage.
-3. ALL WATCHES button when clicked will present a nuber of options for the user to select and sort the items:
+3. ALL WATCHES button when clicked will present a number of options for the user to select and sort the items:
       * By Price
       * By SKU Number
       * By Rating
@@ -180,19 +179,19 @@ As part of functionality testing the developer tested every part of the website 
       * All Watches
 
 
-4. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+4. FOR HIM button when clicked will present a number of options for the user to select and sort the items:
       * Chronograph
       * Sport
       * Smartwatch
       * All Watches
 
-5. FOR HER button when clicked will present a nuber of options for the user to select and sort the items:
+5. FOR HER button when clicked will present a number of options for the user to select and sort the items:
       * Chronograph
       * Sport
       * Smartwatch
       * All Watches
 
-6. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+6. FOR HIM button when clicked will present a number of options for the user to select and sort the items:
       * € 20
       * € 50
       * € 100
@@ -200,13 +199,12 @@ As part of functionality testing the developer tested every part of the website 
 
 
 ##### Delivery Banner
-1. Containing the Shop Now link, when hovered over letter spacing slighlty increases.
+1. Containing the Shop Now link, when hovered over letter spacing slightly increases.
 2. When clicked on the Shop Now link it it will bring the user to the all products page.
 
 ##### Search Bar
 
-- The search bar is available on all pages and when hovered over, the seach bar extends slightly. If there is no searching criteria entered by the user,
- the user will be notified about the same and redirected to all watches page.  
+-The search bar is available on all pages and when hovered over, the search bar extends slightly. If there is no search criteria entered by the user, the user will be notified about the same and redirected to all watches pages.
 
 <details>
 <br>
@@ -219,15 +217,15 @@ As part of functionality testing the developer tested every part of the website 
 
    * Login:
     - Username or e-mail field
-    - Pasword field
-     - For users who are logged in as an admin, there are the following options available:
+    - Password field
+    - For users who are logged in as an admin, there are the following options available:
 
     <details>
     <br>
     <p><img src="Docs/logedin.png" style="min-width:60%" height="400" alt="email confirmation"></p>
     </details> 
 
-- For users who are logged in as a regular users, there are the options available log out and My Profile.
+- For users who are logged in as regular users, there are the options available log out and My Profile.
 
   * Sign Up:
     - E-mail field
@@ -339,9 +337,8 @@ As part of functionality testing the developer tested every part of the website 
 
 ##### Shopping Cart
 
-- The Shopping cart will change the text color to `#45777a` when hovered over. Regardless of the user is not logged in,when clicked it will show 0 if 
-the user has no items added to the shopping cart, otherwise, it will display the number of items added to the cart.
-When clicked it will display a number of optios :
+- The Shopping cart will change the text color to `#45777a` when hovered over. Regardless of whether the user is not logged in,when clicked it will show 0 if the user has no items added to the shopping cart, otherwise, it will display the number of items added to the cart. 
+When clicked it will display a number of options :
 
 - If the user has no items:
 
@@ -440,7 +437,7 @@ When clicked it will display a number of optios :
 
 - Admin users or superusers have rights to modify and update and/or remove contents of the website, such as products, descriptions, prices, reviews etc..
 
-- Adding product items trough the admin dashboard is possible. If the item does not contain an image, 'Image coming soon' will be added by default.
+- Adding product items through the admin dashboard is possible. If the item does not contain an image, 'Image coming soon' will be added by default.
 
 <details>
 <br>

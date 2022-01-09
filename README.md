@@ -124,7 +124,7 @@ other keywords.
     * Search bar;
     * Form to submit reviews;
     * List of all reviews;
-    * Abilty to remove/update your own reviews;
+    * Ability to remove/update your own reviews;
 
    
 - Admin page
@@ -218,7 +218,7 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**Resize Pixel**](https://www.resizepixel.com/) Free online image editor used to resize images format.
 - [**Google Fonts**](https://fonts.google.com) used for project fonts.
 - [**Font Awesome**](https://fontawesome.com/v5.15/icons?d=gallery&p=2) used for project icons.
-- [**Ignore X-Frame headers**](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe/related) used to make override Django's Clickjacking Protection.
+- [**Ignore X-Frame headers**](https://chrome.google.com/webstore/detail/ignore-x-frame-headers/gleekbfjekiniecknbkamfmkohkpodhe/related) used to override Django's Clickjacking Protection.
 
 - [**Gitpod**](https://gitpod.io) used as a development environment.
 - [**Gitpod Chrome Extension**](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) used to open Github repo in Gitpod.
@@ -232,11 +232,11 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**Stackoverflow**](https://stackoverflow.com/) used as a general source of information.
 - [**W3C Markup Validator**](https://validator.w3.org/) Used to test HTML code validation.
 - [**W3C CSS Validator - Jigsaw**](https://jigsaw.w3.org/css-validator/) Used to test CSS code validation.
-- [**PEP8 online**](http://pep8online.com/) used during post deployment testing stage to ensure PEP8 requirement.
-- [**Am I Responsive**](http://ami.responsivedesign.is/) used during post deployment testing stage.
+- [**PEP8 online**](http://pep8online.com/) used during the post deployment testing stage to ensure PEP8 requirement.
+- [**Am I Responsive**](http://ami.responsivedesign.is/) used during the post deployment testing stage.
 - [**Pixlr**](https://pixlr.com) used to remove background and editing photographs.
-- [**Ezgif**](https://ezgif.com/video-to-gif) used to covert videos to gif format.
-- [**Toptal**](https://www.toptal.com/designers/htmlarrows/symbols/) used for HTML simbols and arrows.
+- [**Ezgif**](https://ezgif.com/video-to-gif) used to convert videos to gif format.
+- [**Toptal**](https://www.toptal.com/designers/htmlarrows/symbols/) used for HTML symbols and arrows.
 - [**Colorlib**](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
 
 <a name="wireframe"/>
@@ -293,7 +293,7 @@ In order to successfully  run the app on Heroku,there are a few applications and
 4. Create a unique app name using hyphens instead of spaces.
 5. Choose a region closest to you. I selected my region Europe.
 6. Click Create App button.
-7. Navigate tp Resorces tab and search and select Postgres database.Be sure to use Free plan.
+7. Navigate to Resorces tab and search and select Postgres database.Be sure to use Free plan.
 8. In the Deploy section, as Deployment method select GitHub,this option will automatically deploy from GutHub repository.
 9. In the Connect to GitHub section ensure that your GitHub profile is displayed.
 10. Enter repository name and click Search button.
@@ -313,10 +313,10 @@ In order to successfully  run the app on Heroku,there are a few applications and
 
 ### Code snippets :
 
-For the purpose of this project I refered to and used authentication from the Code Institute Chris's [Boutique ADO](https://github.com/Code-Institute-Solutions/boutique_ado_v1).
-The code snnipets used from this project have been refactored to make them my own and suit more my project's needs where it was possible.
+For the purpose of this project I referred to and used authentication from the Code Institute Chris's [Boutique ADO](https://github.com/Code-Institute-Solutions/boutique_ado_v1).
+The code snippets used from this project have been refactored to make them my own and suit more my project's needs where it was possible.
 
-[**Bootsrap4**](https://getbootstrap.com/) some components and some code snnipets have been used from Bootsrap.
+[**Bootsrap4**](https://getbootstrap.com/) some components and some code snippets have been used from Bootstrap.
 
 [Colorlib](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
 
@@ -368,8 +368,8 @@ It is used for purely educational purposes.
 - Code Institute for equipping me with the skills and knowledge to complete this project.
 - Friends and family for support,motivation and creating activity datasets.
 - Some parts of the README.md file have been used in my previous project.
-- Slack comunity who helped me with fixing the bugs.
-- Code Istitute Tutors : Jo,Sean,Igor,Shely and many others who helped me out of some hard times I had during my work on the project.
+- Slack community who helped me with fixing the bugs.
+- Code Institute Tutors : Jo,Sean,Igor,Shely and many others who helped me out of some hard times I had during my work on the project.
 
 ### Site is for educational purposes
 
