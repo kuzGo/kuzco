@@ -42,7 +42,6 @@ html {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    box-shadow: inset #b7a90c -1px 2px 20px 12px;
 }
 
 .dropdown-menu {
@@ -668,6 +667,10 @@ button {
     right: 20%;
     bottom: 1vh;
     left: 20%;
+}
+.card-menu-text:hover{
+    text-decoration: none;
+    color: #45777a;
 }
 .card-menu-img {
     max-width: 100%;

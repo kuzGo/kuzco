@@ -169,6 +169,36 @@ As part of functionality testing the developer tested every part of the website 
 
 #### Navigation bar:
 
+1. When the company logo is clicked it will bring the user to the home/landing page regardless of what page the user visits.
+2. The Home button will change the text color to `#45777a` when hovered over. When clicked it will bring the user to the homepage.
+3. ALL WATCHES button when clicked will present a nuber of options for the user to select and sort the items:
+      * By Price
+      * By SKU Number
+      * By Rating
+      * By Type
+      * By With the Image
+      * All Watches
+
+
+4. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+      * Chronograph
+      * Sport
+      * Smartwatch
+      * All Watches
+
+5. FOR HER button when clicked will present a nuber of options for the user to select and sort the items:
+      * Chronograph
+      * Sport
+      * Smartwatch
+      * All Watches
+
+6. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
+      * € 20
+      * € 50
+      * € 100
+      * On Sale
+
+
 ##### Delivery Banner
 1. Containing the Shop Now link, when hovered over letter spacing slighlty increases.
 2. When clicked on the Shop Now link it it will bring the user to the all products page.
@@ -190,6 +220,15 @@ As part of functionality testing the developer tested every part of the website 
    * Login:
     - Username or e-mail field
     - Pasword field
+     - For users who are logged in as an admin, there are the following options available:
+
+    <details>
+    <br>
+    <p><img src="Docs/logedin.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+- For users who are logged in as a regular users, there are the options available log out and My Profile.
+
   * Sign Up:
     - E-mail field
     - E-mail field confirmation
@@ -244,37 +283,183 @@ As part of functionality testing the developer tested every part of the website 
     <p><img src="Docs/emconf5.png" style="min-width:60%" height="400" alt="email confirmation"></p>
     </details> 
    
+##### FAVOURITES
+
+- FAVOURITES will change the text color to `#45777a` when hovered over. If the user is not logged in,when clicked it will only option to sign in:
+
+    <details>
+    <br>
+    <p><img src="Docs/favourites.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    - If user is logged in and does not have any favourite items added it will show the following feedback :
+
+    <details>
+    <br>
+    <p><img src="Docs/nofavourites.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    - Favourite button can be found on the detailed product view page and when clicked will bring add a favourite item to the list.
+
+      <details>
+      <br>
+      <p><img src="Docs/addrev.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+      </details>
+
+    - If user is logged in and adds any favourite items it will show the following feedback :
+
+    <details>
+    <br>
+    <p><img src="Docs/addfav.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+    - If user is logged in and removed any favourite items it will show the following feedback :
+
+    <details>
+    <br>
+    <p><img src="Docs/remfav.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+    </details> 
+
+##### REVIEWS
+
+ - REVIEWS will change the text color to `#45777a` when hovered over. If the user is not logged in,when clicked it will display all reviews  previously submitted.
+ Options to Update and Delete reviews will be available only to the users with admin rights:
+
+<details>
+<br>
+<p><img src="Docs/reviews.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Review button can be found on the detailed product view page and when clicked will bring user to review form.
+
+<details>
+<br>
+<p><img src="Docs/addrev.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+##### Shopping Cart
+
+- The Shopping cart will change the text color to `#45777a` when hovered over. Regardless of the user is not logged in,when clicked it will show 0 if 
+the user has no items added to the shopping cart, otherwise, it will display the number of items added to the cart.
+When clicked it will display a number of optios :
+
+- If the user has no items:
+
+<details>
+<br>
+<p><img src="Docs/cartnoitems.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- If the user has items in the cart: 
+
+<details>
+<br>
+<p><img src="Docs/cartdetails.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- The Shopping cart has many functionalities. The user will be able to see Name,SKU,Price and Quantity.
+1. Ability to update the quantity of the items in the cart;
+2. Remove items from the shopping cart;
+3. See cart total;
+4. Delivery total if any;
+5. Return to the page displaying all items;
+6. Go to Secure checkout and make a purchase.
+
+##### Checkout
+
+- Checkout page consists of a number of functionalities. 
+
+<details>
+<br>
+<p><img src="Docs/checkout.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Checkout process testing :
+
+<details>
+<br>
+<p><img src="Docs/checkouttest.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Checkout invalid card number testing :
+
+<details>
+<br>
+<p><img src="Docs/invalidnum.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
 
 
-1. When the company logo is clicked it will bring the user to the home/landing page regardless of what page the user visits.
-2. The Home button will change the text color to `#45777a` when hovered over. When clicked it will bring the user to the homepage.
-3. ALL WATCHES button when clicked will present a nuber of options for the user to select and sort the items:
-      * By Price
-      * By SKU Number
-      * By Rating
-      * By Type
-      * By With the Image
-      * All Watches
+- Checkout email confirmation testing :
+
+<details>
+<br>
+<p><img src="Docs/checkoutemail.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Checkout printing the page testing :
+
+<details>
+<br>
+<p><img src="Docs/printest.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Checkout returning to the products page testing :
+
+<details>
+<br>
+<p><img src="Docs/exploretest.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
 
 
-4. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
-      * Chronograph
-      * Sport
-      * Smartwatch
-      * All Watches
+##### Newsletter Subscription
 
-5. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
-      * Chronograph
-      * Sport
-      * Smartwatch
-      * All Watches
+- Newsletter Subscription  validation testing :
 
-6. FOR HIM button when clicked will present a nuber of options for the user to select and sort the items:
-      * € 20
-      * € 50
-      * € 100
-      * On Sale
+<details>
+<br>
+<p><img src="Docs/subscribetest.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
 
+- Newsletter Subscription confirmation testing :
+
+<details>
+<br>
+<p><img src="Docs/subsconf.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+
+- Newsletter Subscription email confirmation testing :
+
+<details>
+<br>
+<p><img src="Docs/subsemail.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+
+##### Admin Dashboard
+
+- Admin users or superusers have rights to modify and update and/or remove contents of the website, such as products, descriptions, prices, reviews etc..
+
+- Adding product items trough the admin dashboard is possible. If the item does not contain an image, 'Image coming soon' will be added by default.
+
+<details>
+<br>
+<p><img src="Docs/no-image-admin.png" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Adding product items testing:
+
+<details>
+<br>
+<p><img src="Docs/adminadd.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
+
+- Removing product items testing:
+
+<details>
+<br>
+<p><img src="Docs/admindel.gif" style="min-width:60%" height="400" alt="email confirmation"></p>
+</details>
 
 
 [:arrow_up:](#totop)
