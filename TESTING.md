@@ -72,7 +72,7 @@ Lighthouse Mobile report:
 
 <details>
 <br>
- <p><a href="Docs/lighthouse-mobile-ms4.pdf" target="_blank" >Link to Mobile Devices Lighthouse Report</a></p>
+ <p><a href="Docs/lighhouse-mobile-ms4.pdf" target="_blank" >Link to Mobile Devices Lighthouse Report</a></p>
 </details>
 
 ### User stories testing :

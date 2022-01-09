@@ -18,16 +18,19 @@
                 Favourites
             </h2>
             {% if favourite.watches.all %}
-            Number of favourites: {{ favourite.watches.all|length }}
+            Number of favourites:
+            {{ favourite.watches.all|length }}
             {% else %}
             No favourites.
             {% endif %}
         </div>
     </div>
-    {% for item in favourite.watches.all %}
-    <!-- start table -->
+</div>
+<!-- start table -->
+<div class="container">
     <div class="row">
         <div class="col">
+            {% for item in favourite.watches.all %}
             <div class="table-responsive rounded">
                 <table class="table table-sm-dark table-borderless">
                     <thead>
@@ -37,7 +40,6 @@
                             <th scope="col">Price</th>
                         </tr>
                     </thead>
-
                     <tr>
                         <td class="py-3">
                             <p class="my-0">
@@ -70,16 +72,15 @@
                         </td>
                     </tr>
                 </table>
-                <hr>
             </div>
+            <hr>
             {% empty %}
             <p class="mb-5">Your favourite items list is empty</p>
             <a href="{% url 'watches' %}" class="btn cust-button-gold text-uppercase rounded-0 btn-lg">Continue
                 Exploring</a>
+            {% endfor %}
         </div>
     </div>
 </div>
-<!-- end table -->
-{% endfor %}
-
+<!-- end table -->  
 {% endblock %}

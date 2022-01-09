@@ -3,7 +3,7 @@
 
 ## <p><img src="Docs/amiresponsivekuzco.PNG" style="min-width:100%" height="500" alt="Photo of website on devices"></p>
 ---
-<p> <img src="Docs/favicon.png" width="80" height="80" alt="Company logo">></p>
+<p> <img src="Docs/favicon.png" width="80" height="80" alt="Company logo"></p>
 
 - Link to live website [Kuzco Watches](https://kuzco-watches.herokuapp.com/)
 ---
@@ -210,6 +210,7 @@ HTML, CSS, JavaScript/jQuery, Python+Django
 - [**AWS S3**](https://aws.amazon.com/s3/?nc2=type_a) used as a storage for static files.
 - [**Sweet Alert**](https://sweetalert.js.org/) used to customise newsletters alerts.
 - [**Animate.css**](https://animate.style/) used to add aminations to the project.
+- [**Email.js**](https://dashboard.emailjs.com/) used for newsletter subscription.
 - [**DBDiagram**](https://dbdiagram.io/home) Used to create database scheme diagram.
 - [**Google Dev Tools**](https://developer.chrome.com/docs/devtools/) used for developing and testing webpage.
 - [**Firefox Dev Tools**](https://developer.mozilla.org/en-US/docs/Tools) used for developing and testing webpage.
@@ -318,6 +319,10 @@ The code snnipets used from this project have been refactored to make them my ow
 [**Bootsrap4**](https://getbootstrap.com/) some components and some code snnipets have been used from Bootsrap.
 
 [Colorlib](https://preview.colorlib.com/#capitalshop) free template used for inspiration for newsletter and footer.
+
+[CSS Scan](https://getcssscan.com/css-buttons-examples) button 52 used and refactored for the purpose of the project.
+
+[WS3](https://www.w3schools.com/w3css/w3css_badges.asp) used for making a shopping cart badge.
 
 ### Photographers :
 

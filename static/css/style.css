@@ -42,7 +42,9 @@ html {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    box-shadow: inset #b7a90c -1px 2px 20px 12px;
 }
+
 .dropdown-menu {
     background-color: #b7a90c;
 }
@@ -94,8 +96,7 @@ html {
     color: #b6a90c!important;
     text-transform: uppercase;
 }
-.nav-link:hover,
-a:hover {
+.nav-link:hover {
     color: #45777a!important;
 }
 .page-link {
@@ -316,6 +317,7 @@ a:hover {
     }
 }
 /* END OF Boutique Ado styling  */
+
 /* Smartphones portrait and landscape orientation  */
 @media only screen and (min-width: 320px) and (max-width: 823px) {
      
@@ -352,7 +354,9 @@ a:hover {
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
-        
+    }
+    .shopping-card {
+        margin-top: 4rem!important;
     }
     .navbar-toggler{
         color: #45777a;
@@ -622,7 +626,7 @@ button {
     height: 60px;
     border: 0;
     color: #1d1e26;
-    background: #45777a;
+    background: #fff;
     border: 1px solid rgba(255,255,255,.2);
     border-radius: 0;
     padding: 17px 13px;
